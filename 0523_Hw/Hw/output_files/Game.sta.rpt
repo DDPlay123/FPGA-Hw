@@ -1,0 +1,974 @@
+Timing Analyzer report for Game
+Sat Jun 18 05:50:59 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1100mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1100mV 85C Model Setup Summary
+  8. Slow 1100mV 85C Model Hold Summary
+  9. Slow 1100mV 85C Model Recovery Summary
+ 10. Slow 1100mV 85C Model Removal Summary
+ 11. Slow 1100mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1100mV 85C Model Metastability Summary
+ 13. Slow 1100mV 0C Model Fmax Summary
+ 14. Slow 1100mV 0C Model Setup Summary
+ 15. Slow 1100mV 0C Model Hold Summary
+ 16. Slow 1100mV 0C Model Recovery Summary
+ 17. Slow 1100mV 0C Model Removal Summary
+ 18. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 19. Slow 1100mV 0C Model Metastability Summary
+ 20. Fast 1100mV 85C Model Setup Summary
+ 21. Fast 1100mV 85C Model Hold Summary
+ 22. Fast 1100mV 85C Model Recovery Summary
+ 23. Fast 1100mV 85C Model Removal Summary
+ 24. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 25. Fast 1100mV 85C Model Metastability Summary
+ 26. Fast 1100mV 0C Model Setup Summary
+ 27. Fast 1100mV 0C Model Hold Summary
+ 28. Fast 1100mV 0C Model Recovery Summary
+ 29. Fast 1100mV 0C Model Removal Summary
+ 30. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 31. Fast 1100mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 38. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths Summary
+ 46. Clock Status Summary
+ 47. Unconstrained Input Ports
+ 48. Unconstrained Output Ports
+ 49. Unconstrained Input Ports
+ 50. Unconstrained Output Ports
+ 51. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; Game                                                ;
+; Device Family         ; Cyclone V                                           ;
+; Device Name           ; 5CSXFC6D6F31C6                                      ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.72        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;  15.0%      ;
+;     Processor 3            ;  14.9%      ;
+;     Processor 4            ;  14.7%      ;
+;     Processor 5            ;  13.9%      ;
+;     Processor 6            ;  13.9%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                         ;
++----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
+; Clock Name     ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets            ;
++----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
+; Clk_50MHz      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clk_50MHz }      ;
+; CLK_64         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK_64 }         ;
+; hor_counter[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { hor_counter[0] } ;
+; VGA_CLK~reg0   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_CLK~reg0 }   ;
++----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
+
+
++------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                   ;
++------------+-----------------+----------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name     ; Note ;
++------------+-----------------+----------------+------+
+; 69.29 MHz  ; 69.29 MHz       ; hor_counter[0] ;      ;
+; 147.38 MHz ; 147.38 MHz      ; CLK_64         ;      ;
+; 169.06 MHz ; 169.06 MHz      ; Clk_50MHz      ;      ;
+; 191.61 MHz ; 191.61 MHz      ; VGA_CLK~reg0   ;      ;
++------------+-----------------+----------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary      ;
++----------------+---------+---------------+
+; Clock          ; Slack   ; End Point TNS ;
++----------------+---------+---------------+
+; hor_counter[0] ; -10.732 ; -1362.740     ;
+; CLK_64         ; -5.785  ; -407.161      ;
+; Clk_50MHz      ; -4.915  ; -96.750       ;
+; VGA_CLK~reg0   ; -4.219  ; -72.738       ;
++----------------+---------+---------------+
+
+
++-----------------------------------------+
+; Slow 1100mV 85C Model Hold Summary      ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; hor_counter[0] ; -5.399 ; -144.564      ;
+; Clk_50MHz      ; -0.593 ; -0.593        ;
+; CLK_64         ; 0.320  ; 0.000         ;
+; VGA_CLK~reg0   ; 0.586  ; 0.000         ;
++----------------+--------+---------------+
+
+
++-----------------------------------------+
+; Slow 1100mV 85C Model Recovery Summary  ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; hor_counter[0] ; -7.081 ; -50.358       ;
++----------------+--------+---------------+
+
+
++----------------------------------------+
+; Slow 1100mV 85C Model Removal Summary  ;
++----------------+-------+---------------+
+; Clock          ; Slack ; End Point TNS ;
++----------------+-------+---------------+
+; hor_counter[0] ; 0.851 ; 0.000         ;
++----------------+-------+---------------+
+
+
++---------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
++----------------+--------+-------------------------+
+; Clock          ; Slack  ; End Point TNS           ;
++----------------+--------+-------------------------+
+; hor_counter[0] ; -3.957 ; -635.667                ;
+; Clk_50MHz      ; -0.508 ; -20.916                 ;
+; CLK_64         ; -0.394 ; -63.257                 ;
+; VGA_CLK~reg0   ; -0.394 ; -12.266                 ;
++----------------+--------+-------------------------+
+
+
+-----------------------------------------------
+; Slow 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                    ;
++------------+-----------------+----------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name     ; Note ;
++------------+-----------------+----------------+------+
+; 70.9 MHz   ; 70.9 MHz        ; hor_counter[0] ;      ;
+; 147.73 MHz ; 147.73 MHz      ; CLK_64         ;      ;
+; 167.39 MHz ; 167.39 MHz      ; Clk_50MHz      ;      ;
+; 190.95 MHz ; 190.95 MHz      ; VGA_CLK~reg0   ;      ;
++------------+-----------------+----------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary       ;
++----------------+---------+---------------+
+; Clock          ; Slack   ; End Point TNS ;
++----------------+---------+---------------+
+; hor_counter[0] ; -10.270 ; -1324.415     ;
+; CLK_64         ; -5.769  ; -400.808      ;
+; Clk_50MHz      ; -4.974  ; -94.662       ;
+; VGA_CLK~reg0   ; -4.237  ; -73.679       ;
++----------------+---------+---------------+
+
+
++-----------------------------------------+
+; Slow 1100mV 0C Model Hold Summary       ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; hor_counter[0] ; -5.362 ; -148.411      ;
+; Clk_50MHz      ; -0.545 ; -0.545        ;
+; CLK_64         ; 0.286  ; 0.000         ;
+; VGA_CLK~reg0   ; 0.657  ; 0.000         ;
++----------------+--------+---------------+
+
+
++-----------------------------------------+
+; Slow 1100mV 0C Model Recovery Summary   ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; hor_counter[0] ; -7.005 ; -50.433       ;
++----------------+--------+---------------+
+
+
++----------------------------------------+
+; Slow 1100mV 0C Model Removal Summary   ;
++----------------+-------+---------------+
+; Clock          ; Slack ; End Point TNS ;
++----------------+-------+---------------+
+; hor_counter[0] ; 0.793 ; 0.000         ;
++----------------+-------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
++----------------+--------+------------------------+
+; Clock          ; Slack  ; End Point TNS          ;
++----------------+--------+------------------------+
+; hor_counter[0] ; -3.822 ; -616.505               ;
+; Clk_50MHz      ; -0.525 ; -22.535                ;
+; CLK_64         ; -0.394 ; -61.711                ;
+; VGA_CLK~reg0   ; -0.394 ; -12.097                ;
++----------------+--------+------------------------+
+
+
+----------------------------------------------
+; Slow 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------+
+; Fast 1100mV 85C Model Setup Summary     ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; hor_counter[0] ; -7.239 ; -863.689      ;
+; Clk_50MHz      ; -3.186 ; -43.108       ;
+; CLK_64         ; -3.099 ; -210.989      ;
+; VGA_CLK~reg0   ; -2.141 ; -36.839       ;
++----------------+--------+---------------+
+
+
++-----------------------------------------+
+; Fast 1100mV 85C Model Hold Summary      ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; hor_counter[0] ; -3.313 ; -87.258       ;
+; Clk_50MHz      ; -0.001 ; -0.001        ;
+; CLK_64         ; 0.146  ; 0.000         ;
+; VGA_CLK~reg0   ; 0.221  ; 0.000         ;
++----------------+--------+---------------+
+
+
++-----------------------------------------+
+; Fast 1100mV 85C Model Recovery Summary  ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; hor_counter[0] ; -3.734 ; -23.347       ;
++----------------+--------+---------------+
+
+
++----------------------------------------+
+; Fast 1100mV 85C Model Removal Summary  ;
++----------------+-------+---------------+
+; Clock          ; Slack ; End Point TNS ;
++----------------+-------+---------------+
+; hor_counter[0] ; 0.363 ; 0.000         ;
++----------------+-------+---------------+
+
+
++---------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary ;
++----------------+--------+-------------------------+
+; Clock          ; Slack  ; End Point TNS           ;
++----------------+--------+-------------------------+
+; hor_counter[0] ; -2.314 ; -321.670                ;
+; Clk_50MHz      ; -0.516 ; -4.438                  ;
+; CLK_64         ; -0.093 ; -1.481                  ;
+; VGA_CLK~reg0   ; 0.053  ; 0.000                   ;
++----------------+--------+-------------------------+
+
+
+-----------------------------------------------
+; Fast 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------+
+; Fast 1100mV 0C Model Setup Summary      ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; hor_counter[0] ; -6.260 ; -755.195      ;
+; CLK_64         ; -2.784 ; -186.645      ;
+; Clk_50MHz      ; -2.666 ; -36.279       ;
+; VGA_CLK~reg0   ; -1.903 ; -33.103       ;
++----------------+--------+---------------+
+
+
++-----------------------------------------+
+; Fast 1100mV 0C Model Hold Summary       ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; hor_counter[0] ; -2.988 ; -76.957       ;
+; Clk_50MHz      ; -0.137 ; -0.137        ;
+; CLK_64         ; 0.118  ; 0.000         ;
+; VGA_CLK~reg0   ; 0.222  ; 0.000         ;
++----------------+--------+---------------+
+
+
++-----------------------------------------+
+; Fast 1100mV 0C Model Recovery Summary   ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; hor_counter[0] ; -3.314 ; -20.519       ;
++----------------+--------+---------------+
+
+
++----------------------------------------+
+; Fast 1100mV 0C Model Removal Summary   ;
++----------------+-------+---------------+
+; Clock          ; Slack ; End Point TNS ;
++----------------+-------+---------------+
+; hor_counter[0] ; 0.362 ; 0.000         ;
++----------------+-------+---------------+
+
+
++--------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
++----------------+--------+------------------------+
+; Clock          ; Slack  ; End Point TNS          ;
++----------------+--------+------------------------+
+; hor_counter[0] ; -1.997 ; -275.038               ;
+; Clk_50MHz      ; -0.505 ; -4.451                 ;
+; CLK_64         ; -0.038 ; -0.080                 ;
+; VGA_CLK~reg0   ; 0.072  ; 0.000                  ;
++----------------+--------+------------------------+
+
+
+----------------------------------------------
+; Fast 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                ;
++------------------+-----------+----------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold     ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+----------+----------+---------+---------------------+
+; Worst-case Slack ; -10.732   ; -5.399   ; -7.081   ; 0.362   ; -3.957              ;
+;  CLK_64          ; -5.785    ; 0.118    ; N/A      ; N/A     ; -0.394              ;
+;  Clk_50MHz       ; -4.974    ; -0.593   ; N/A      ; N/A     ; -0.525              ;
+;  VGA_CLK~reg0    ; -4.237    ; 0.221    ; N/A      ; N/A     ; -0.394              ;
+;  hor_counter[0]  ; -10.732   ; -5.399   ; -7.081   ; 0.362   ; -3.957              ;
+; Design-wide TNS  ; -1939.389 ; -148.956 ; -50.433  ; 0.0     ; -732.106            ;
+;  CLK_64          ; -407.161  ; 0.000    ; N/A      ; N/A     ; -63.257             ;
+;  Clk_50MHz       ; -96.750   ; -0.593   ; N/A      ; N/A     ; -22.535             ;
+;  VGA_CLK~reg0    ; -73.679   ; 0.000    ; N/A      ; N/A     ; -12.266             ;
+;  hor_counter[0]  ; -1362.740 ; -148.411 ; -50.433  ; 0.000   ; -635.667            ;
++------------------+-----------+----------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                  ;
++-------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin         ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++-------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; RGB[0]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[1]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[2]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[3]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[4]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[5]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[6]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[7]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[8]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[9]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[10]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[11]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[12]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[13]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[14]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[15]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[16]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[17]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[18]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[19]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[20]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[21]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[22]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RGB[23]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; VGA_CLK     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; VGA_BLANK_N ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; VGA_HS      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; VGA_VS      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; VGA_SYNC_N  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++-------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++--------------------------------------------------------------+
+; Input Transition Times                                       ;
++-----------+--------------+-----------------+-----------------+
+; Pin       ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-----------+--------------+-----------------+-----------------+
+; Clk_50MHz ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Key[0]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Key[1]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Key[3]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Key[2]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-----------+--------------+-----------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin         ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; RGB[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
+; RGB[3]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[4]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; RGB[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[8]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[9]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[10]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[11]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[12]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[13]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[14]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[15]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[16]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[17]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[18]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[19]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[20]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[21]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[22]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RGB[23]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; VGA_CLK     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; VGA_BLANK_N ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; VGA_HS      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; VGA_VS      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
+; VGA_SYNC_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin         ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; RGB[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
+; RGB[3]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[4]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; RGB[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[8]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[9]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[10]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[11]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[12]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[13]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[14]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[15]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[16]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[17]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[18]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[19]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[20]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[21]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[22]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RGB[23]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; VGA_CLK     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; VGA_BLANK_N ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; VGA_HS      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; VGA_VS      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
+; VGA_SYNC_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin         ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; RGB[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; RGB[3]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[4]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; RGB[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[8]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[9]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[10]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[11]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[12]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[13]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[14]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[15]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[16]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[17]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[18]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[19]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[20]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[21]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[22]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RGB[23]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; VGA_CLK     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; VGA_BLANK_N ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; VGA_HS      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; VGA_VS      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; VGA_SYNC_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin         ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; RGB[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; RGB[3]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[4]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; RGB[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[8]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[9]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[10]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[11]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[12]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[13]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[14]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[15]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[16]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[17]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[18]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[19]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[20]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[21]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[22]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; RGB[23]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; VGA_CLK     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; VGA_BLANK_N ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; VGA_HS      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; VGA_VS      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; VGA_SYNC_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Transfers                                                             ;
++----------------+----------------+----------+----------+----------+----------+
+; From Clock     ; To Clock       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------+----------------+----------+----------+----------+----------+
+; Clk_50MHz      ; Clk_50MHz      ; 1556     ; 0        ; 0        ; 0        ;
+; CLK_64         ; Clk_50MHz      ; 1        ; 1        ; 0        ; 0        ;
+; VGA_CLK~reg0   ; Clk_50MHz      ; 1        ; 1        ; 0        ; 0        ;
+; CLK_64         ; CLK_64         ; 27039    ; 0        ; 0        ; 0        ;
+; CLK_64         ; hor_counter[0] ; 0        ; 0        ; 3652     ; 0        ;
+; hor_counter[0] ; hor_counter[0] ; 0        ; 0        ; 201      ; 201      ;
+; VGA_CLK~reg0   ; hor_counter[0] ; 0        ; 0        ; 2456     ; 0        ;
+; hor_counter[0] ; VGA_CLK~reg0   ; 292      ; 292      ; 0        ; 0        ;
+; VGA_CLK~reg0   ; VGA_CLK~reg0   ; 1834     ; 0        ; 0        ; 0        ;
++----------------+----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------+
+; Hold Transfers                                                              ;
++----------------+----------------+----------+----------+----------+----------+
+; From Clock     ; To Clock       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------+----------------+----------+----------+----------+----------+
+; Clk_50MHz      ; Clk_50MHz      ; 1556     ; 0        ; 0        ; 0        ;
+; CLK_64         ; Clk_50MHz      ; 1        ; 1        ; 0        ; 0        ;
+; VGA_CLK~reg0   ; Clk_50MHz      ; 1        ; 1        ; 0        ; 0        ;
+; CLK_64         ; CLK_64         ; 27039    ; 0        ; 0        ; 0        ;
+; CLK_64         ; hor_counter[0] ; 0        ; 0        ; 3652     ; 0        ;
+; hor_counter[0] ; hor_counter[0] ; 0        ; 0        ; 201      ; 201      ;
+; VGA_CLK~reg0   ; hor_counter[0] ; 0        ; 0        ; 2456     ; 0        ;
+; hor_counter[0] ; VGA_CLK~reg0   ; 292      ; 292      ; 0        ; 0        ;
+; VGA_CLK~reg0   ; VGA_CLK~reg0   ; 1834     ; 0        ; 0        ; 0        ;
++----------------+----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------+
+; Recovery Transfers                                                          ;
++----------------+----------------+----------+----------+----------+----------+
+; From Clock     ; To Clock       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------+----------------+----------+----------+----------+----------+
+; hor_counter[0] ; hor_counter[0] ; 0        ; 0        ; 0        ; 266      ;
++----------------+----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------+
+; Removal Transfers                                                           ;
++----------------+----------------+----------+----------+----------+----------+
+; From Clock     ; To Clock       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------+----------------+----------+----------+----------+----------+
+; hor_counter[0] ; hor_counter[0] ; 0        ; 0        ; 0        ; 266      ;
++----------------+----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 76    ; 76   ;
+; Unconstrained Output Ports      ; 28    ; 28   ;
+; Unconstrained Output Port Paths ; 572   ; 572  ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------------+
+; Clock Status Summary                                 ;
++----------------+----------------+------+-------------+
+; Target         ; Clock          ; Type ; Status      ;
++----------------+----------------+------+-------------+
+; CLK_64         ; CLK_64         ; Base ; Constrained ;
+; Clk_50MHz      ; Clk_50MHz      ; Base ; Constrained ;
+; VGA_CLK~reg0   ; VGA_CLK~reg0   ; Base ; Constrained ;
+; hor_counter[0] ; hor_counter[0] ; Base ; Constrained ;
++----------------+----------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; Key[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Key[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Key[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Key[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; RGB[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[8]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[9]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[10]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[11]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[12]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[13]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[14]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[15]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[16]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[17]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[18]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[19]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[20]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[21]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[22]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[23]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; VGA_BLANK_N ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; VGA_CLK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; VGA_HS      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; VGA_VS      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; Key[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Key[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Key[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Key[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; RGB[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[8]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[9]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[10]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[11]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[12]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[13]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[14]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[15]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[16]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[17]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[18]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[19]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[20]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[21]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[22]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RGB[23]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; VGA_BLANK_N ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; VGA_CLK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; VGA_HS      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; VGA_VS      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sat Jun 18 05:50:54 2022
+Info: Command: quartus_sta Game -c Game
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): The Timing Analyzer is analyzing 228 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Game.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name VGA_CLK~reg0 VGA_CLK~reg0
+    Info (332105): create_clock -period 1.000 -name Clk_50MHz Clk_50MHz
+    Info (332105): create_clock -period 1.000 -name CLK_64 CLK_64
+    Info (332105): create_clock -period 1.000 -name hor_counter[0] hor_counter[0]
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1100mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -10.732
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -10.732           -1362.740 hor_counter[0] 
+    Info (332119):    -5.785            -407.161 CLK_64 
+    Info (332119):    -4.915             -96.750 Clk_50MHz 
+    Info (332119):    -4.219             -72.738 VGA_CLK~reg0 
+Info (332146): Worst-case hold slack is -5.399
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.399            -144.564 hor_counter[0] 
+    Info (332119):    -0.593              -0.593 Clk_50MHz 
+    Info (332119):     0.320               0.000 CLK_64 
+    Info (332119):     0.586               0.000 VGA_CLK~reg0 
+Info (332146): Worst-case recovery slack is -7.081
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -7.081             -50.358 hor_counter[0] 
+Info (332146): Worst-case removal slack is 0.851
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.851               0.000 hor_counter[0] 
+Info (332146): Worst-case minimum pulse width slack is -3.957
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.957            -635.667 hor_counter[0] 
+    Info (332119):    -0.508             -20.916 Clk_50MHz 
+    Info (332119):    -0.394             -63.257 CLK_64 
+    Info (332119):    -0.394             -12.266 VGA_CLK~reg0 
+Info: Analyzing Slow 1100mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -10.270
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -10.270           -1324.415 hor_counter[0] 
+    Info (332119):    -5.769            -400.808 CLK_64 
+    Info (332119):    -4.974             -94.662 Clk_50MHz 
+    Info (332119):    -4.237             -73.679 VGA_CLK~reg0 
+Info (332146): Worst-case hold slack is -5.362
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.362            -148.411 hor_counter[0] 
+    Info (332119):    -0.545              -0.545 Clk_50MHz 
+    Info (332119):     0.286               0.000 CLK_64 
+    Info (332119):     0.657               0.000 VGA_CLK~reg0 
+Info (332146): Worst-case recovery slack is -7.005
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -7.005             -50.433 hor_counter[0] 
+Info (332146): Worst-case removal slack is 0.793
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.793               0.000 hor_counter[0] 
+Info (332146): Worst-case minimum pulse width slack is -3.822
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.822            -616.505 hor_counter[0] 
+    Info (332119):    -0.525             -22.535 Clk_50MHz 
+    Info (332119):    -0.394             -61.711 CLK_64 
+    Info (332119):    -0.394             -12.097 VGA_CLK~reg0 
+Info: Analyzing Fast 1100mV 85C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -7.239
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -7.239            -863.689 hor_counter[0] 
+    Info (332119):    -3.186             -43.108 Clk_50MHz 
+    Info (332119):    -3.099            -210.989 CLK_64 
+    Info (332119):    -2.141             -36.839 VGA_CLK~reg0 
+Info (332146): Worst-case hold slack is -3.313
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.313             -87.258 hor_counter[0] 
+    Info (332119):    -0.001              -0.001 Clk_50MHz 
+    Info (332119):     0.146               0.000 CLK_64 
+    Info (332119):     0.221               0.000 VGA_CLK~reg0 
+Info (332146): Worst-case recovery slack is -3.734
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.734             -23.347 hor_counter[0] 
+Info (332146): Worst-case removal slack is 0.363
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.363               0.000 hor_counter[0] 
+Info (332146): Worst-case minimum pulse width slack is -2.314
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.314            -321.670 hor_counter[0] 
+    Info (332119):    -0.516              -4.438 Clk_50MHz 
+    Info (332119):    -0.093              -1.481 CLK_64 
+    Info (332119):     0.053               0.000 VGA_CLK~reg0 
+Info: Analyzing Fast 1100mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -6.260
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.260            -755.195 hor_counter[0] 
+    Info (332119):    -2.784            -186.645 CLK_64 
+    Info (332119):    -2.666             -36.279 Clk_50MHz 
+    Info (332119):    -1.903             -33.103 VGA_CLK~reg0 
+Info (332146): Worst-case hold slack is -2.988
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.988             -76.957 hor_counter[0] 
+    Info (332119):    -0.137              -0.137 Clk_50MHz 
+    Info (332119):     0.118               0.000 CLK_64 
+    Info (332119):     0.222               0.000 VGA_CLK~reg0 
+Info (332146): Worst-case recovery slack is -3.314
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.314             -20.519 hor_counter[0] 
+Info (332146): Worst-case removal slack is 0.362
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.362               0.000 hor_counter[0] 
+Info (332146): Worst-case minimum pulse width slack is -1.997
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.997            -275.038 hor_counter[0] 
+    Info (332119):    -0.505              -4.451 Clk_50MHz 
+    Info (332119):    -0.038              -0.080 CLK_64 
+    Info (332119):     0.072               0.000 VGA_CLK~reg0 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 5171 megabytes
+    Info: Processing ended: Sat Jun 18 05:50:59 2022
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:07
+
+

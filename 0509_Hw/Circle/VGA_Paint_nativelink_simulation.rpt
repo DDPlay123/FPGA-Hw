@@ -1,0 +1,95 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cyclonev
+Quartus root          :  c:/intelfpga_lite/20.1/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/20.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  VGA_Paint.vo
+Sim SDF file          :  VGA_Paint__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/intelfpga_lite/20.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File VGA_Paint_run_msim_gate_verilog.do already exists - backing up current file as VGA_Paint_run_msim_gate_verilog.do.bak7
+Probing transcript
+ModelSim-Altera Info: # Reading pref.tcl
+ModelSim-Altera Info: # do VGA_Paint_run_msim_gate_verilog.do
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim-Altera Info: # vmap work gate_work 
+ModelSim-Altera Info: # Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {VGA_Paint.vo}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim-Altera Info: # Start time: 13:49:19 on May 11,2022
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." VGA_Paint.vo 
+ModelSim-Altera Info: # -- Compiling module VGA_Paint
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	VGA_Paint
+ModelSim-Altera Info: # End time: 13:49:19 on May 11,2022, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+C:/FPGA/0509_Hw/Circle {C:/FPGA/0509_Hw/Circle/VGA_Paint_tb.v}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim-Altera Info: # Start time: 13:49:19 on May 11,2022
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/0509_Hw/Circle" C:/FPGA/0509_Hw/Circle/VGA_Paint_tb.v 
+ModelSim-Altera Info: # -- Compiling module VGA_Paint_tb
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	VGA_Paint_tb
+ModelSim-Altera Info: # End time: 13:49:19 on May 11,2022, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  VGA_Paint_tb
+ModelSim-Altera Info: # vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" VGA_Paint_tb 
+ModelSim-Altera Info: # Start time: 13:49:19 on May 11,2022
+ModelSim-Altera Info: # Loading work.VGA_Paint_tb
+ModelSim-Altera Info: # Loading work.VGA_Paint
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_io_obuf
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_io_ibuf
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_lcell_comb
+ModelSim-Altera Info: # Loading altera_ver.dffeas
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_mac
+ModelSim-Altera Info: # Loading altera_ver.PRIM_GDFF_LOW
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Add6~8  File: VGA_Paint.vo Line: 3681
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Add6~8  File: VGA_Paint.vo Line: 3681
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Add6~8  File: VGA_Paint.vo Line: 3681
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Add6~8  File: VGA_Paint.vo Line: 3681
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mac  File: VGA_Paint.vo Line: 4061
+ModelSim-Altera Warning: # ** Warning: (vsim-3016) Port type is incompatible with connection (port 'by').
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mac  File: VGA_Paint.vo Line: 4061
+ModelSim-Altera Warning: # ** Warning: (vsim-3016) Port type is incompatible with connection (port 'by').
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mac  File: VGA_Paint.vo Line: 4061
+ModelSim-Altera Warning: # ** Warning: (vsim-3016) Port type is incompatible with connection (port 'by').
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mac  File: VGA_Paint.vo Line: 4061
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mac  File: VGA_Paint.vo Line: 4061
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mac  File: VGA_Paint.vo Line: 4061
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mac  File: VGA_Paint.vo Line: 4061
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult2~mac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult2~mac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+ModelSim-Altera Info: # End time: 13:49:22 on May 11,2022, Elapsed time: 0:00:03
+ModelSim-Altera Info: # Errors: 0, Warnings: 13
+Info: NativeLink simulation flow was successful

@@ -1,0 +1,177 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Red[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLANK_N",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_HS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_VS",
+					"strict" : false
+				},
+				{
+					"name" : "Test[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[16]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[17]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[18]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[19]",
+					"strict" : false
+				},
+				{
+					"name" : "Test[20]",
+					"strict" : false
+				},
+				{
+					"name" : "Clk_50MHz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

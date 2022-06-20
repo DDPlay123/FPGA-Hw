@@ -1,0 +1,129 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Red[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Red[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Green[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Green[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Green[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Green[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Green[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Green[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Green[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Green[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Blue[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLANK_N",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_HS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_VS",
+					"strict" : false
+				},
+				{
+					"name" : "Key",
+					"strict" : false
+				},
+				{
+					"name" : "Clk_50MHz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

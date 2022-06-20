@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter",
+					"strict" : false
+				},
+				{
+					"name" : "Road_SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Res_n",
+					"strict" : false
+				},
+				{
+					"name" : "Road_SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Road_SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_50MHz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

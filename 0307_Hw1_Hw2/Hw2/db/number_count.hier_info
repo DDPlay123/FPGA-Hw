@@ -1,0 +1,67 @@
+|number_count
+Q[0] <= cus_dff_2:A.Q
+Q[1] <= cus_dff_2:B.Q
+Q[2] <= cus_dff_2:C.Q
+Q[3] <= cus_dff_2:D.Q
+CK => cus_dff_2:D.CK
+CK => cus_dff_2:C.CK
+CK => cus_dff_2:A.CK
+CK => cus_dff_2:B.CK
+CK => cus_dff_2:E.CK
+Res => cus_dff_2:E.Res
+Res => cus_dff_2:B.Res
+Res => cus_dff_2:A.Res
+Res => cus_dff_2:C.Res
+Res => cus_dff_2:D.Res
+
+
+|number_count|cus_dff_2:D
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Set => not1.IN0
+CK => inst3.IN1
+CK => inst2.IN1
+D => inst4.IN1
+Res => not2.IN0
+Qb <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|number_count|cus_dff_2:C
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Set => not1.IN0
+CK => inst3.IN1
+CK => inst2.IN1
+D => inst4.IN1
+Res => not2.IN0
+Qb <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|number_count|cus_dff_2:A
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Set => not1.IN0
+CK => inst3.IN1
+CK => inst2.IN1
+D => inst4.IN1
+Res => not2.IN0
+Qb <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|number_count|cus_dff_2:B
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Set => not1.IN0
+CK => inst3.IN1
+CK => inst2.IN1
+D => inst4.IN1
+Res => not2.IN0
+Qb <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|number_count|cus_dff_2:E
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Set => not1.IN0
+CK => inst3.IN1
+CK => inst2.IN1
+D => inst4.IN1
+Res => not2.IN0
+Qb <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+

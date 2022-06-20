@@ -1,0 +1,369 @@
+# Reading pref.tcl
+# do VGA_Paint_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {VGA_Paint.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:39 on May 22,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." VGA_Paint.vo 
+# -- Compiling module VGA_Paint
+# 
+# Top level modules:
+# 	VGA_Paint
+# End time: 19:42:39 on May 22,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/FPGA/0509_Hw/Hw1 {C:/FPGA/0509_Hw/Hw1/VGA_Paint_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:39 on May 22,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/0509_Hw/Hw1" C:/FPGA/0509_Hw/Hw1/VGA_Paint_tb.v 
+# -- Compiling module VGA_Paint_tb
+# 
+# Top level modules:
+# 	VGA_Paint_tb
+# End time: 19:42:39 on May 22,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  VGA_Paint_tb
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" VGA_Paint_tb 
+# Start time: 19:42:39 on May 22,2022
+# Loading work.VGA_Paint_tb
+# Loading work.VGA_Paint
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cyclonev_ver.cyclonev_mac
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~327  File: VGA_Paint.vo Line: 5446
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~327  File: VGA_Paint.vo Line: 5446
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~327  File: VGA_Paint.vo Line: 5446
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~327  File: VGA_Paint.vo Line: 5446
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4328).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~327  File: VGA_Paint.vo Line: 5446
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4329).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~327  File: VGA_Paint.vo Line: 5446
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~327  File: VGA_Paint.vo Line: 5446
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~327  File: VGA_Paint.vo Line: 5446
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~327  File: VGA_Paint.vo Line: 5446
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult5~327 /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult5~327 /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~mult_hlmac  File: VGA_Paint.vo Line: 5525
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~mult_hlmac  File: VGA_Paint.vo Line: 5525
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~mult_hlmac  File: VGA_Paint.vo Line: 5525
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~mult_hlmac  File: VGA_Paint.vo Line: 5525
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~mult_hlmac  File: VGA_Paint.vo Line: 5525
+# ** Warning: (vsim-3015) [PCDPC] - Port size (14) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~mult_hlmac  File: VGA_Paint.vo Line: 5525
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult5~mult_hlmac  File: VGA_Paint.vo Line: 5525
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult5~mult_hlmac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult5~mult_hlmac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4328).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4329).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~324  File: VGA_Paint.vo Line: 5605
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult6~324 /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult6~324 /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3015) [PCDPC] - Port size (14) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult6~mult_hlmac  File: VGA_Paint.vo Line: 5683
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult6~mult_hlmac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult6~mult_hlmac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~8  File: VGA_Paint.vo Line: 7293
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~8  File: VGA_Paint.vo Line: 7293
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~8  File: VGA_Paint.vo Line: 7293
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~8  File: VGA_Paint.vo Line: 7293
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4328).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~8  File: VGA_Paint.vo Line: 7293
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4329).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~8  File: VGA_Paint.vo Line: 7293
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~8  File: VGA_Paint.vo Line: 7293
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~8  File: VGA_Paint.vo Line: 7293
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~8  File: VGA_Paint.vo Line: 7293
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult1~8 /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult1~8 /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~mult_hlmac  File: VGA_Paint.vo Line: 7372
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~mult_hlmac  File: VGA_Paint.vo Line: 7372
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~mult_hlmac  File: VGA_Paint.vo Line: 7372
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~mult_hlmac  File: VGA_Paint.vo Line: 7372
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~mult_hlmac  File: VGA_Paint.vo Line: 7372
+# ** Warning: (vsim-3015) [PCDPC] - Port size (14) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~mult_hlmac  File: VGA_Paint.vo Line: 7372
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult1~mult_hlmac  File: VGA_Paint.vo Line: 7372
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult1~mult_hlmac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult1~mult_hlmac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult0~mac  File: VGA_Paint.vo Line: 7452
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult0~mac  File: VGA_Paint.vo Line: 7452
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult0~mac  File: VGA_Paint.vo Line: 7452
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult0~mac  File: VGA_Paint.vo Line: 7452
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult0~mac  File: VGA_Paint.vo Line: 7452
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult0~mac  File: VGA_Paint.vo Line: 7452
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult0~mac  File: VGA_Paint.vo Line: 7452
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult0~mac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult0~mac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~326  File: VGA_Paint.vo Line: 7780
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~326  File: VGA_Paint.vo Line: 7780
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~326  File: VGA_Paint.vo Line: 7780
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~326  File: VGA_Paint.vo Line: 7780
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~326  File: VGA_Paint.vo Line: 7780
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~326  File: VGA_Paint.vo Line: 7780
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~326  File: VGA_Paint.vo Line: 7780
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4328).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~326  File: VGA_Paint.vo Line: 7780
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4329).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~326  File: VGA_Paint.vo Line: 7780
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~326  File: VGA_Paint.vo Line: 7780
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~326  File: VGA_Paint.vo Line: 7780
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~326  File: VGA_Paint.vo Line: 7780
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult2~326 /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult2~326 /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mult_hlmac  File: VGA_Paint.vo Line: 7859
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mult_hlmac  File: VGA_Paint.vo Line: 7859
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mult_hlmac  File: VGA_Paint.vo Line: 7859
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mult_hlmac  File: VGA_Paint.vo Line: 7859
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mult_hlmac  File: VGA_Paint.vo Line: 7859
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mult_hlmac  File: VGA_Paint.vo Line: 7859
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mult_hlmac  File: VGA_Paint.vo Line: 7859
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mult_hlmac  File: VGA_Paint.vo Line: 7859
+# ** Warning: (vsim-3015) [PCDPC] - Port size (14) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mult_hlmac  File: VGA_Paint.vo Line: 7859
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult2~mult_hlmac  File: VGA_Paint.vo Line: 7859
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult2~mult_hlmac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult2~mult_hlmac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~8  File: VGA_Paint.vo Line: 8785
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~8  File: VGA_Paint.vo Line: 8785
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~8  File: VGA_Paint.vo Line: 8785
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~8  File: VGA_Paint.vo Line: 8785
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~8  File: VGA_Paint.vo Line: 8785
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~8  File: VGA_Paint.vo Line: 8785
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~8  File: VGA_Paint.vo Line: 8785
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4328).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~8  File: VGA_Paint.vo Line: 8785
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4329).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~8  File: VGA_Paint.vo Line: 8785
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~8  File: VGA_Paint.vo Line: 8785
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~8  File: VGA_Paint.vo Line: 8785
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~8  File: VGA_Paint.vo Line: 8785
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult4~8 /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult4~8 /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~mult_hlmac  File: VGA_Paint.vo Line: 8864
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~mult_hlmac  File: VGA_Paint.vo Line: 8864
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~mult_hlmac  File: VGA_Paint.vo Line: 8864
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~mult_hlmac  File: VGA_Paint.vo Line: 8864
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~mult_hlmac  File: VGA_Paint.vo Line: 8864
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~mult_hlmac  File: VGA_Paint.vo Line: 8864
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~mult_hlmac  File: VGA_Paint.vo Line: 8864
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~mult_hlmac  File: VGA_Paint.vo Line: 8864
+# ** Warning: (vsim-3015) [PCDPC] - Port size (14) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~mult_hlmac  File: VGA_Paint.vo Line: 8864
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult4~mult_hlmac  File: VGA_Paint.vo Line: 8864
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult4~mult_hlmac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult4~mult_hlmac /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult3~8  File: VGA_Paint.vo Line: 8944
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult3~8  File: VGA_Paint.vo Line: 8944
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult3~8  File: VGA_Paint.vo Line: 8944
+# ** Warning: (vsim-3016) Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult3~8  File: VGA_Paint.vo Line: 8944
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult3~8  File: VGA_Paint.vo Line: 8944
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4328).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult3~8  File: VGA_Paint.vo Line: 8944
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4329).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult3~8  File: VGA_Paint.vo Line: 8944
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult3~8  File: VGA_Paint.vo Line: 8944
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (27) for port 'scanin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult3~8  File: VGA_Paint.vo Line: 8944
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /VGA_Paint_tb/U1/\Mult3~8  File: VGA_Paint.vo Line: 8944
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult3~8 /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /VGA_Paint_tb/U1/\Mult3~8 /inst/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: a7032  Hostname: DESKTOP-U6C53SH  ProcessID: 13512
+#           Attempting to use alternate WLF file "./wlft8ztbxw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8ztbxw
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 sec
+# Break key hit
+# Simulation stop requested.
+# End time: 20:13:28 on May 22,2022, Elapsed time: 0:30:49
+# Errors: 0, Warnings: 156

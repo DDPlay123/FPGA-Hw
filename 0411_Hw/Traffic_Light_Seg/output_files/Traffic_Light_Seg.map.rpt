@@ -1,0 +1,410 @@
+Analysis & Synthesis report for Traffic_Light_Seg
+Sun Apr 17 21:03:16 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Apr 17 21:03:16 2022       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; Traffic_Light_Seg                           ;
+; Top-level Entity Name           ; Traffic_Light_Seg                           ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 58                                          ;
+; Total pins                      ; 39                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; Traffic_Light_Seg  ; Traffic_Light_Seg  ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                          ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
+; Traffic_Light_Seg.v              ; yes             ; User Verilog HDL File  ; C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 87       ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 123      ;
+;     -- 7 input functions                    ; 11       ;
+;     -- 6 input functions                    ; 39       ;
+;     -- 5 input functions                    ; 26       ;
+;     -- 4 input functions                    ; 10       ;
+;     -- <=3 input functions                  ; 37       ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 58       ;
+;                                             ;          ;
+; I/O pins                                    ; 39       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; count[4] ;
+; Maximum fan-out                             ; 62       ;
+; Total fan-out                               ; 836      ;
+; Average fan-out                             ; 3.23     ;
++---------------------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name       ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------------+--------------+
+; |Traffic_Light_Seg         ; 123 (123)           ; 58 (58)                   ; 0                 ; 0          ; 39   ; 0            ; |Traffic_Light_Seg  ; Traffic_Light_Seg ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; Seg4[5]~reg0                          ; Stuck at GND due to stuck port data_in ;
+; Seg4[4]~reg0                          ; Stuck at GND due to stuck port data_in ;
+; LED[1]~reg0                           ; Merged with LED[0]~reg0                ;
+; Seg3[3]~reg0                          ; Merged with Seg3[0]~reg0               ;
+; Seg3[4]~reg0                          ; Merged with Seg3[0]~reg0               ;
+; Seg2[3]~reg0                          ; Merged with Seg2[0]~reg0               ;
+; Seg3[1]~reg0                          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 7 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 58    ;
+; Number of registers using Synchronous Clear  ; 27    ;
+; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 31    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Seg4[6]~reg0                           ; 1       ;
+; Seg3[6]~reg0                           ; 3       ;
+; Seg2[6]~reg0                           ; 5       ;
+; Seg1[6]~reg0                           ; 3       ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |Traffic_Light_Seg|Seg4[0]~reg0 ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 0 LEs                ; 25 LEs                 ; Yes        ; |Traffic_Light_Seg|count[2]     ;
+; 39:1               ; 2 bits    ; 52 LEs        ; 12 LEs               ; 40 LEs                 ; Yes        ; |Traffic_Light_Seg|LED[0]~reg0  ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 8 LEs                ; 10 LEs                 ; Yes        ; |Traffic_Light_Seg|LED[3]~reg0  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 58                          ;
+;     CLR               ; 2                           ;
+;     CLR SCLR          ; 25                          ;
+;     ENA               ; 23                          ;
+;     ENA CLR           ; 5                           ;
+;     ENA SCLR SLD      ; 2                           ;
+;     ENA SLD           ; 1                           ;
+; arriav_lcell_comb     ; 127                         ;
+;     arith             ; 25                          ;
+;         1 data inputs ; 25                          ;
+;     extend            ; 11                          ;
+;         7 data inputs ; 11                          ;
+;     normal            ; 91                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 10                          ;
+;         5 data inputs ; 26                          ;
+;         6 data inputs ; 39                          ;
+; boundary_port         ; 39                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.40                        ;
+; Average LUT depth     ; 2.16                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun Apr 17 21:03:09 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Traffic_Light_Seg -c Traffic_Light_Seg
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file traffic_light_seg.v
+    Info (12023): Found entity 1: Traffic_Light_Seg File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file traffic_light_seg_tb.v
+    Info (12023): Found entity 1: Traffic_Light_Seg_tb File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg_tb.v Line: 2
+Info (12127): Elaborating entity "Traffic_Light_Seg" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(81): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 81
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(88): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 88
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(95): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 95
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(102): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 102
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(109): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 109
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(116): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 116
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(123): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 123
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(130): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 130
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(137): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 137
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(144): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 144
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(151): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 151
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(158): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 158
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(165): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 165
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(172): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 172
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(179): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 179
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(186): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 186
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(193): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 193
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(200): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 200
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(207): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 207
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(214): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 214
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(234): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 234
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(241): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 241
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(248): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 248
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(255): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 255
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(262): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 262
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(269): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 269
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(276): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 276
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(283): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 283
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(290): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 290
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(297): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 297
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(304): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 304
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(311): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 311
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(318): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 318
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(325): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 325
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(332): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 332
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(339): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 339
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(346): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 346
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(353): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 353
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(360): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 360
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(367): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 367
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(387): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 387
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(394): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 394
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(401): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 401
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(408): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 408
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(415): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 415
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(422): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 422
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(429): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 429
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(436): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 436
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(443): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 443
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(450): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 450
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(457): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 457
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(464): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 464
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(471): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 471
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(478): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 478
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(485): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 485
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(492): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 492
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(499): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 499
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(506): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 506
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(513): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 513
+Warning (10230): Verilog HDL assignment warning at Traffic_Light_Seg.v(520): truncated value with size 32 to match size of target (5) File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 520
+Info (10264): Verilog HDL Case Statement information at Traffic_Light_Seg.v(71): all case item expressions in this case statement are onehot File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 71
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Seg4[4]" is stuck at GND File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 70
+    Warning (13410): Pin "Seg4[5]" is stuck at GND File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 70
+    Warning (13410): Pin "Seg3[1]" is stuck at GND File: C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg.v Line: 70
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 164 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 34 output pins
+    Info (21061): Implemented 125 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Sun Apr 17 21:03:16 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:13
+
+

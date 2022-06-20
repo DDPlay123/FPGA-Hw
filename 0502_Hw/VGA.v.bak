@@ -1,0 +1,6 @@
+module VGA(Red, Green, Blue, 
+			  VGA_CLK, VGA_BLANK_N, 
+			  VGA_HS, VGA_VS, VGA_SYNC_N
+			  Clk_50MHz);
+
+endmodule 

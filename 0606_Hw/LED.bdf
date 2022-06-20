@@ -1,0 +1,162 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect -112 320 56 336)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "clk_50M" (rect 5 0 46 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -112 440 56 456)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "SW" (rect 5 0 22 17)(font "Intel Clear" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect -120 360 56 376)
+	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
+	(text "LED[7..0]" (rect 5 0 48 17)(font "Intel Clear" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 176 8)(pt 124 8))
+		(line (pt 124 4)(pt 98 4))
+		(line (pt 124 12)(pt 98 12))
+		(line (pt 124 12)(pt 124 4))
+		(line (pt 98 4)(pt 94 8))
+		(line (pt 94 8)(pt 98 12))
+		(line (pt 98 12)(pt 94 8))
+	)
+	(flipy)
+)
+(symbol
+	(rect 80 256 528 480)
+	(text "NIOS_LED_Qsys" (rect 173 -1 292 15)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 208 25 220)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 41 75)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 192 72))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "reset_reset_n" (rect 0 0 80 14)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 141 84 155)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 192 152))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "sw_external_connection_export" (rect 0 0 185 14)(font "Arial" (font_size 8)))
+		(text "sw_external_connection_export" (rect 4 181 189 195)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 192 192))
+	)
+	(port
+		(pt 0 112)
+		(output)
+		(text "led_external_connection_export[7..0]" (rect 0 0 211 14)(font "Arial" (font_size 8)))
+		(text "led_external_connection_export[7..0]" (rect 4 101 215 115)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 192 112)(line_width 3))
+	)
+	(drawing
+		(text "clk" (rect 177 43 194 58)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 197 67 211 79)(font "Arial" (color 0 0 0)))
+		(text "led_external_connection" (rect 53 83 211 98)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 197 107 227 119)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 163 123 196 138)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 197 147 233 159)(font "Arial" (color 0 0 0)))
+		(text "sw_external_connection" (rect 53 163 209 178)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 197 187 227 199)(font "Arial" (color 0 0 0)))
+		(text " NIOS_LED_Qsys " (rect 367 208 461 220)(font "Arial" ))
+		(line (pt 192 32)(pt 256 32))
+		(line (pt 256 32)(pt 256 208))
+		(line (pt 192 208)(pt 256 208))
+		(line (pt 192 32)(pt 192 208))
+		(line (pt 193 52)(pt 193 76))
+		(line (pt 194 52)(pt 194 76))
+		(line (pt 193 92)(pt 193 116))
+		(line (pt 194 92)(pt 194 116))
+		(line (pt 193 132)(pt 193 156))
+		(line (pt 194 132)(pt 194 156))
+		(line (pt 193 172)(pt 193 196))
+		(line (pt 194 172)(pt 194 196))
+		(line (pt 0 0)(pt 448 0))
+		(line (pt 448 0)(pt 448 224))
+		(line (pt 0 224)(pt 448 224))
+		(line (pt 0 0)(pt 0 224))
+	)
+)
+(symbol
+	(rect 16 392 48 408)
+	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
+	(text "inst1" (rect 3 5 25 22)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(connector
+	(pt 80 368)
+	(pt 56 368)
+	(bus)
+)
+(connector
+	(pt 80 328)
+	(pt 56 328)
+)
+(connector
+	(pt 80 448)
+	(pt 56 448)
+)
+(connector
+	(pt 80 408)
+	(pt 32 408)
+)

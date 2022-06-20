@@ -1,0 +1,17 @@
+|adder_4bit
+S[0] <= _.SUM_OUT
+S[1] <= _.SUM_OUT
+S[2] <= _.SUM_OUT
+S[3] <= _.SUM_OUT
+Cout <= _.SUM_OUT
+A[0] => _.DATAD
+A[1] => _.DATAD
+A[2] => _.DATAD
+A[3] => _.DATAD
+B[0] => _.DATAC
+B[1] => _.DATAC
+B[2] => _.DATAC
+B[3] => _.DATAC
+Cin => _.DATAB
+
+

@@ -1,0 +1,149 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA/0307_Hw1_Hw2/Hw1/simulation/qsim
+vbcd_adder
+Z1 !s110 1647238988
+!i10b 1
+!s100 N6D3BdjdIQj=I2>l=RRbL0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I=;Yhi5z>>kfI48baVF;Tl3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1647238987
+Z5 8bcd_adder_4bit.vo
+Z6 Fbcd_adder_4bit.vo
+!i122 34
+L0 32 477
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1647238988.000000
+Z9 !s107 bcd_adder_4bit.vo|
+Z10 !s90 -work|work|bcd_adder_4bit.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vbcd_adder_vlg_vec_tst
+R1
+!i10b 1
+!s100 nF[2hN]Q[6@cP9W;n3X<l2
+R2
+IOX^Fgff<M]H81EHa2zZHF1
+R3
+R0
+R4
+Z13 8Waveform.vwf.vt
+Z14 FWaveform.vwf.vt
+!i122 35
+L0 30 66
+R7
+r1
+!s85 0
+31
+R8
+Z15 !s107 Waveform.vwf.vt|
+Z16 !s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+vbinary_adder_4bit
+!s110 1647187804
+!i10b 1
+!s100 J?OK3<D8n4gX@NLO?R]Pn3
+R2
+IMP?J`1iKYjEJ[?6z>oac:3
+R3
+R0
+w1647187803
+R5
+R6
+!i122 20
+L0 32 394
+R7
+r1
+!s85 0
+31
+Z17 !s108 1647187804.000000
+R9
+R10
+!i113 1
+R11
+R12
+vbinary_adder_4bit_vlg_vec_tst
+!s110 1647187805
+!i10b 1
+!s100 N=LfHVA9j3N6_c]W8cMTR1
+R2
+Ib9ghcNkbWRD4f6VgT;__[0
+R3
+R0
+w1647187802
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 21
+L0 30 98
+R7
+r1
+!s85 0
+31
+R17
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12
+vfull_adder
+Z18 !s110 1647186924
+!i10b 1
+!s100 NG^K6c2W[n`fRWKJ0ZXeS3
+R2
+IIekEm;8HS2;ZG0X12CJLC3
+R3
+R0
+w1647186923
+R5
+R6
+!i122 12
+L0 32 176
+R7
+r1
+!s85 0
+31
+Z19 !s108 1647186924.000000
+R9
+R10
+!i113 1
+R11
+R12
+vfull_adder_vlg_vec_tst
+R18
+!i10b 1
+!s100 0Y3VE9ZlO`X[InVjH?gGI1
+R2
+IlEnG:D4fPf>hE1>_:ghB73
+R3
+R0
+w1647186922
+R13
+R14
+!i122 13
+L0 30 46
+R7
+r1
+!s85 0
+31
+R19
+R15
+R16
+!i113 1
+R11
+R12

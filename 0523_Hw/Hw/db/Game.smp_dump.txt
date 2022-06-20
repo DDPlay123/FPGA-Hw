@@ -1,0 +1,15 @@
+
+State Machine - |Game|state
+Name state.1000 state.0100 state.0010 state.0001 
+state.0001 0 0 0 0 
+state.0010 0 0 1 1 
+state.0100 0 1 0 1 
+state.1000 1 0 0 1 
+
+State Machine - |Game|state_Boss
+Name state_Boss.0001 state_Boss.1000 state_Boss.0100 state_Boss.0010 state_Boss.1111 
+state_Boss.1111 0 0 0 0 0 
+state_Boss.0010 0 0 0 1 1 
+state_Boss.0100 0 0 1 0 1 
+state_Boss.1000 0 1 0 0 1 
+state_Boss.0001 1 0 0 0 1 

@@ -1,0 +1,979 @@
+Analysis & Synthesis report for Game
+Sat Jun 18 05:49:38 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Game|state
+  9. State Machine - |Game|state_Boss
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Jun 18 05:49:38 2022       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; Game                                        ;
+; Top-level Entity Name           ; Game                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 151                                         ;
+; Total pins                      ; 34                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; Game               ; Game               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                               ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+; Game.v                           ; yes             ; User Verilog HDL File  ; D:/FPGA/0523_Hw/Hw/Game.v    ;         ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimate of Logic utilization (ALMs needed) ; 576    ;
+;                                             ;        ;
+; Combinational ALUT usage for logic          ; 1002   ;
+;     -- 7 input functions                    ; 11     ;
+;     -- 6 input functions                    ; 137    ;
+;     -- 5 input functions                    ; 120    ;
+;     -- 4 input functions                    ; 109    ;
+;     -- <=3 input functions                  ; 625    ;
+;                                             ;        ;
+; Dedicated logic registers                   ; 151    ;
+;                                             ;        ;
+; I/O pins                                    ; 34     ;
+;                                             ;        ;
+; Total DSP Blocks                            ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; CLK_64 ;
+; Maximum fan-out                             ; 99     ;
+; Total fan-out                               ; 3875   ;
+; Average fan-out                             ; 3.17   ;
++---------------------------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |Game                      ; 1002 (1002)         ; 151 (151)                 ; 0                 ; 0          ; 34   ; 0            ; |Game               ; Game        ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------+
+; State Machine - |Game|state                                    ;
++------------+------------+------------+------------+------------+
+; Name       ; state.1000 ; state.0100 ; state.0010 ; state.0001 ;
++------------+------------+------------+------------+------------+
+; state.0001 ; 0          ; 0          ; 0          ; 0          ;
+; state.0010 ; 0          ; 0          ; 1          ; 1          ;
+; state.0100 ; 0          ; 1          ; 0          ; 1          ;
+; state.1000 ; 1          ; 0          ; 0          ; 1          ;
++------------+------------+------------+------------+------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------+
+; State Machine - |Game|state_Boss                                                                          ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+; Name            ; state_Boss.0001 ; state_Boss.1000 ; state_Boss.0100 ; state_Boss.0010 ; state_Boss.1111 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+; state_Boss.1111 ; 0               ; 0               ; 0               ; 0               ; 0               ;
+; state_Boss.0010 ; 0               ; 0               ; 0               ; 1               ; 1               ;
+; state_Boss.0100 ; 0               ; 0               ; 1               ; 0               ; 1               ;
+; state_Boss.1000 ; 0               ; 1               ; 0               ; 0               ; 1               ;
+; state_Boss.0001 ; 1               ; 0               ; 0               ; 0               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
++------------------------------------------------------+---------------------+------------------------+
+; X_Elf[0]                                             ; always2             ; yes                    ;
+; Y_Boss[0]                                            ; always2             ; yes                    ;
+; Y_Elf[0]                                             ; always2             ; yes                    ;
+; X_Boss[0]                                            ; always2             ; yes                    ;
+; X_Food_1[0]                                          ; always2             ; yes                    ;
+; X_Food_2[0]                                          ; x1_Food_2[9]        ; yes                    ;
+; X_Food_3[0]                                          ; x1_Food_3[9]        ; yes                    ;
+; X_Food_4[0]                                          ; x1_Food_4[9]        ; yes                    ;
+; Y_Food_2[0]                                          ; x2_Food_2[9]        ; yes                    ;
+; Y_Food_1[0]                                          ; always2             ; yes                    ;
+; Y_Food_4[0]                                          ; x2_Food_4[9]        ; yes                    ;
+; X_Food_5[0]                                          ; x1_Food_5[9]        ; yes                    ;
+; Y_Food_5[0]                                          ; x2_Food_5[9]        ; yes                    ;
+; Z_Boss[0]                                            ; always2             ; yes                    ;
+; x_Elf[8]                                             ; always2             ; yes                    ;
+; x_Elf[7]                                             ; always2             ; yes                    ;
+; x_Elf[6]                                             ; always2             ; yes                    ;
+; x_Elf[5]                                             ; always2             ; yes                    ;
+; x_Elf[4]                                             ; always2             ; yes                    ;
+; y_Elf[9]                                             ; always2             ; yes                    ;
+; y_Elf[8]                                             ; always2             ; yes                    ;
+; y_Elf[7]                                             ; always2             ; yes                    ;
+; y_Elf[6]                                             ; always2             ; yes                    ;
+; y_Elf[5]                                             ; always2             ; yes                    ;
+; y_Elf[4]                                             ; always2             ; yes                    ;
+; x_Elf[9]                                             ; always2             ; yes                    ;
+; x_Elf[3]                                             ; always2             ; yes                    ;
+; x_Elf[2]                                             ; always2             ; yes                    ;
+; y_Elf[3]                                             ; always2             ; yes                    ;
+; y_Elf[2]                                             ; always2             ; yes                    ;
+; x_Boss[9]                                            ; always2             ; yes                    ;
+; x_Boss[8]                                            ; always2             ; yes                    ;
+; x_Boss[7]                                            ; always2             ; yes                    ;
+; x_Boss[6]                                            ; always2             ; yes                    ;
+; x_Boss[5]                                            ; always2             ; yes                    ;
+; x_Boss[4]                                            ; always2             ; yes                    ;
+; y_Boss[9]                                            ; always2             ; yes                    ;
+; y_Boss[8]                                            ; always2             ; yes                    ;
+; y_Boss[7]                                            ; always2             ; yes                    ;
+; y_Boss[6]                                            ; always2             ; yes                    ;
+; y_Boss[5]                                            ; always2             ; yes                    ;
+; y_Boss[4]                                            ; always2             ; yes                    ;
+; x_Boss[3]                                            ; always2             ; yes                    ;
+; x_Boss[2]                                            ; always2             ; yes                    ;
+; y_Boss[3]                                            ; always2             ; yes                    ;
+; y_Boss[2]                                            ; always2             ; yes                    ;
+; y_Boss[1]                                            ; always2             ; yes                    ;
+; y_Boss[0]                                            ; always2             ; yes                    ;
+; x1_Food_1[9]                                         ; always2             ; yes                    ;
+; x1_Food_1[8]                                         ; always2             ; yes                    ;
+; x1_Food_1[7]                                         ; always2             ; yes                    ;
+; x1_Food_1[6]                                         ; always2             ; yes                    ;
+; x1_Food_1[5]                                         ; always2             ; yes                    ;
+; x1_Food_1[4]                                         ; always2             ; yes                    ;
+; y1_Food_1[9]                                         ; always2             ; yes                    ;
+; y1_Food_1[8]                                         ; always2             ; yes                    ;
+; y1_Food_1[7]                                         ; always2             ; yes                    ;
+; y1_Food_1[6]                                         ; always2             ; yes                    ;
+; y1_Food_1[5]                                         ; always2             ; yes                    ;
+; y1_Food_1[4]                                         ; always2             ; yes                    ;
+; x1_Food_1[3]                                         ; always2             ; yes                    ;
+; x1_Food_1[2]                                         ; always2             ; yes                    ;
+; x1_Food_1[1]                                         ; always2             ; yes                    ;
+; x1_Food_1[0]                                         ; always2             ; yes                    ;
+; y1_Food_1[3]                                         ; always2             ; yes                    ;
+; y1_Food_1[2]                                         ; always2             ; yes                    ;
+; y1_Food_1[1]                                         ; always2             ; yes                    ;
+; y1_Food_1[0]                                         ; always2             ; yes                    ;
+; x1_Food_2[9]                                         ; x1_Food_2[9]        ; yes                    ;
+; x1_Food_2[8]                                         ; x1_Food_2[9]        ; yes                    ;
+; x1_Food_2[7]                                         ; x1_Food_2[9]        ; yes                    ;
+; x1_Food_2[6]                                         ; x1_Food_2[9]        ; yes                    ;
+; x1_Food_2[5]                                         ; x1_Food_2[9]        ; yes                    ;
+; x1_Food_2[4]                                         ; x1_Food_2[9]        ; yes                    ;
+; y1_Food_2[9]                                         ; x1_Food_2[9]        ; yes                    ;
+; y1_Food_2[8]                                         ; x1_Food_2[9]        ; yes                    ;
+; y1_Food_2[7]                                         ; x1_Food_2[9]        ; yes                    ;
+; y1_Food_2[6]                                         ; x1_Food_2[9]        ; yes                    ;
+; y1_Food_2[5]                                         ; x1_Food_2[9]        ; yes                    ;
+; y1_Food_2[4]                                         ; x1_Food_2[9]        ; yes                    ;
+; x1_Food_2[3]                                         ; x1_Food_2[9]        ; yes                    ;
+; x1_Food_2[2]                                         ; x1_Food_2[9]        ; yes                    ;
+; x1_Food_2[1]                                         ; x1_Food_2[9]        ; yes                    ;
+; x1_Food_2[0]                                         ; x1_Food_2[9]        ; yes                    ;
+; y1_Food_2[3]                                         ; x1_Food_2[9]        ; yes                    ;
+; y1_Food_2[2]                                         ; x1_Food_2[9]        ; yes                    ;
+; y1_Food_2[1]                                         ; x1_Food_2[9]        ; yes                    ;
+; y1_Food_2[0]                                         ; x1_Food_2[9]        ; yes                    ;
+; x1_Food_3[9]                                         ; x1_Food_3[9]        ; yes                    ;
+; x1_Food_3[8]                                         ; x1_Food_3[9]        ; yes                    ;
+; x1_Food_3[7]                                         ; x1_Food_3[9]        ; yes                    ;
+; x1_Food_3[6]                                         ; x1_Food_3[9]        ; yes                    ;
+; x1_Food_3[5]                                         ; x1_Food_3[9]        ; yes                    ;
+; x1_Food_3[4]                                         ; x1_Food_3[9]        ; yes                    ;
+; y1_Food_3[9]                                         ; x1_Food_3[9]        ; yes                    ;
+; y1_Food_3[8]                                         ; x1_Food_3[9]        ; yes                    ;
+; y1_Food_3[7]                                         ; x1_Food_3[9]        ; yes                    ;
+; y1_Food_3[6]                                         ; x1_Food_3[9]        ; yes                    ;
+; y1_Food_3[5]                                         ; x1_Food_3[9]        ; yes                    ;
+; y1_Food_3[4]                                         ; x1_Food_3[9]        ; yes                    ;
+; Number of user-specified and inferred latches = 228  ;                     ;                        ;
++------------------------------------------------------+---------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; state_Boss~7                          ; Lost fanout        ;
+; state_Boss~8                          ; Lost fanout        ;
+; state_Boss~9                          ; Lost fanout        ;
+; state_Boss~10                         ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 151   ;
+; Number of registers using Synchronous Clear  ; 28    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 34    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; yB[6]                                   ; 6       ;
+; yB[1]                                   ; 6       ;
+; yB[0]                                   ; 6       ;
+; yB[5]                                   ; 6       ;
+; xB[7]                                   ; 6       ;
+; xB[6]                                   ; 7       ;
+; xB[4]                                   ; 7       ;
+; xB[1]                                   ; 7       ;
+; y[3]                                    ; 8       ;
+; y[7]                                    ; 12      ;
+; y[6]                                    ; 11      ;
+; x[7]                                    ; 12      ;
+; x[6]                                    ; 12      ;
+; x[3]                                    ; 13      ;
+; x[2]                                    ; 14      ;
+; x[4]                                    ; 12      ;
+; Total number of inverted registers = 16 ;         ;
++-----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Game|y[9]                 ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Game|x[8]                 ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Game|xB[8]                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Game|yB[7]                ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Game|y[3]                 ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Game|x[2]                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Game|xB[1]                ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Game|yB[0]                ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Game|RGB                  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Game|ver_counter          ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Game|RGB                  ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Game|state_Boss           ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |Game|state                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 151                         ;
+;     ENA               ; 34                          ;
+;     SCLR              ; 28                          ;
+;     plain             ; 89                          ;
+; arriav_lcell_comb     ; 1004                        ;
+;     arith             ; 277                         ;
+;         0 data inputs ; 17                          ;
+;         1 data inputs ; 257                         ;
+;         2 data inputs ; 3                           ;
+;     extend            ; 11                          ;
+;         7 data inputs ; 11                          ;
+;     normal            ; 672                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 274                         ;
+;         4 data inputs ; 109                         ;
+;         5 data inputs ; 120                         ;
+;         6 data inputs ; 137                         ;
+;     shared            ; 44                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 40                          ;
+; boundary_port         ; 34                          ;
+;                       ;                             ;
+; Max LUT depth         ; 8.40                        ;
+; Average LUT depth     ; 4.31                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sat Jun 18 05:49:29 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Game -c Game
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file game.v
+    Info (12023): Found entity 1: Game File: D:/FPGA/0523_Hw/Hw/Game.v Line: 1
+Info (12127): Elaborating entity "Game" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Game.v(134): object "Y_Food_3" assigned a value but never read File: D:/FPGA/0523_Hw/Hw/Game.v Line: 134
+Warning (10230): Verilog HDL assignment warning at Game.v(24): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 24
+Warning (10230): Verilog HDL assignment warning at Game.v(27): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 27
+Warning (10230): Verilog HDL assignment warning at Game.v(30): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 30
+Warning (10230): Verilog HDL assignment warning at Game.v(33): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 33
+Warning (10230): Verilog HDL assignment warning at Game.v(36): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 36
+Warning (10230): Verilog HDL assignment warning at Game.v(76): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 76
+Warning (10230): Verilog HDL assignment warning at Game.v(87): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 87
+Warning (10230): Verilog HDL assignment warning at Game.v(97): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 97
+Warning (10230): Verilog HDL assignment warning at Game.v(107): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 107
+Warning (10230): Verilog HDL assignment warning at Game.v(117): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 117
+Warning (10230): Verilog HDL assignment warning at Game.v(140): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 140
+Warning (10230): Verilog HDL assignment warning at Game.v(141): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 141
+Warning (10230): Verilog HDL assignment warning at Game.v(160): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 160
+Warning (10230): Verilog HDL assignment warning at Game.v(161): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 161
+Warning (10230): Verilog HDL assignment warning at Game.v(164): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 164
+Warning (10230): Verilog HDL assignment warning at Game.v(165): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 165
+Warning (10230): Verilog HDL assignment warning at Game.v(168): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 168
+Warning (10230): Verilog HDL assignment warning at Game.v(169): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 169
+Warning (10230): Verilog HDL assignment warning at Game.v(172): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 172
+Warning (10230): Verilog HDL assignment warning at Game.v(173): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 173
+Warning (10230): Verilog HDL assignment warning at Game.v(176): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 176
+Warning (10230): Verilog HDL assignment warning at Game.v(177): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 177
+Warning (10230): Verilog HDL assignment warning at Game.v(186): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 186
+Warning (10230): Verilog HDL assignment warning at Game.v(187): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 187
+Warning (10230): Verilog HDL assignment warning at Game.v(190): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 190
+Warning (10230): Verilog HDL assignment warning at Game.v(191): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 191
+Warning (10230): Verilog HDL assignment warning at Game.v(194): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 194
+Warning (10230): Verilog HDL assignment warning at Game.v(195): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 195
+Warning (10230): Verilog HDL assignment warning at Game.v(198): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 198
+Warning (10230): Verilog HDL assignment warning at Game.v(199): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 199
+Warning (10230): Verilog HDL assignment warning at Game.v(202): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 202
+Warning (10230): Verilog HDL assignment warning at Game.v(203): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 203
+Warning (10230): Verilog HDL assignment warning at Game.v(213): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 213
+Warning (10230): Verilog HDL assignment warning at Game.v(214): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 214
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "x_Elf", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "y_Elf", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "X_Elf", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "Y_Elf", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "x1_Food_1", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "y1_Food_1", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "X_Food_1", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "x1_Food_2", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "y1_Food_2", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "X_Food_2", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "x1_Food_3", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "y1_Food_3", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "X_Food_3", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "x1_Food_4", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "y1_Food_4", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "X_Food_4", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "x1_Food_5", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "y1_Food_5", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "X_Food_5", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "x2_Food_1", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "y2_Food_1", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "Y_Food_1", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "x2_Food_2", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "y2_Food_2", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "Y_Food_2", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "x2_Food_3", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "y2_Food_3", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "x2_Food_4", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "y2_Food_4", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "Y_Food_4", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "x2_Food_5", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "y2_Food_5", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "Y_Food_5", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "x_Boss", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "y_Boss", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "X_Boss", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "Y_Boss", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10240): Verilog HDL Always Construct warning at Game.v(139): inferring latch(es) for variable "Z_Boss", which holds its previous value in one or more paths through the always construct File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (10230): Verilog HDL assignment warning at Game.v(362): truncated value with size 32 to match size of target (28) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 362
+Warning (10230): Verilog HDL assignment warning at Game.v(365): truncated value with size 32 to match size of target (28) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 365
+Warning (10230): Verilog HDL assignment warning at Game.v(378): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 378
+Warning (10230): Verilog HDL assignment warning at Game.v(381): truncated value with size 32 to match size of target (10) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 381
+Info (10041): Inferred latch for "Z_Boss[0]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Z_Boss[1]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Z_Boss[2]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Z_Boss[3]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Z_Boss[4]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Z_Boss[5]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Z_Boss[6]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Z_Boss[7]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Z_Boss[8]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Z_Boss[9]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Z_Boss[10]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Z_Boss[11]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Z_Boss[12]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[0]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[1]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[2]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[3]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[4]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[5]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[6]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[7]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[8]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[9]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[10]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[11]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Boss[12]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[0]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[1]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[2]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[3]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[4]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[5]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[6]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[7]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[8]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[9]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[10]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[11]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "X_Boss[12]" at Game.v(261) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 261
+Info (10041): Inferred latch for "Y_Food_5[0]" at Game.v(258) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 258
+Info (10041): Inferred latch for "Y_Food_5[1]" at Game.v(258) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 258
+Info (10041): Inferred latch for "Y_Food_5[2]" at Game.v(258) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 258
+Info (10041): Inferred latch for "Y_Food_5[3]" at Game.v(258) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 258
+Info (10041): Inferred latch for "Y_Food_5[4]" at Game.v(258) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 258
+Info (10041): Inferred latch for "Y_Food_5[5]" at Game.v(258) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 258
+Info (10041): Inferred latch for "Y_Food_5[6]" at Game.v(258) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 258
+Info (10041): Inferred latch for "Y_Food_5[7]" at Game.v(258) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 258
+Info (10041): Inferred latch for "Y_Food_5[8]" at Game.v(258) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 258
+Info (10041): Inferred latch for "Y_Food_5[9]" at Game.v(258) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 258
+Info (10041): Inferred latch for "Y_Food_5[10]" at Game.v(258) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 258
+Info (10041): Inferred latch for "Y_Food_4[0]" at Game.v(255) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 255
+Info (10041): Inferred latch for "Y_Food_4[1]" at Game.v(255) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 255
+Info (10041): Inferred latch for "Y_Food_4[2]" at Game.v(255) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 255
+Info (10041): Inferred latch for "Y_Food_4[3]" at Game.v(255) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 255
+Info (10041): Inferred latch for "Y_Food_4[4]" at Game.v(255) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 255
+Info (10041): Inferred latch for "Y_Food_4[5]" at Game.v(255) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 255
+Info (10041): Inferred latch for "Y_Food_4[6]" at Game.v(255) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 255
+Info (10041): Inferred latch for "Y_Food_4[7]" at Game.v(255) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 255
+Info (10041): Inferred latch for "Y_Food_4[8]" at Game.v(255) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 255
+Info (10041): Inferred latch for "Y_Food_4[9]" at Game.v(255) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 255
+Info (10041): Inferred latch for "Y_Food_4[10]" at Game.v(255) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 255
+Info (10041): Inferred latch for "Y_Food_2[0]" at Game.v(249) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 249
+Info (10041): Inferred latch for "Y_Food_2[1]" at Game.v(249) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 249
+Info (10041): Inferred latch for "Y_Food_2[2]" at Game.v(249) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 249
+Info (10041): Inferred latch for "Y_Food_2[3]" at Game.v(249) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 249
+Info (10041): Inferred latch for "Y_Food_2[4]" at Game.v(249) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 249
+Info (10041): Inferred latch for "Y_Food_2[5]" at Game.v(249) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 249
+Info (10041): Inferred latch for "Y_Food_2[6]" at Game.v(249) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 249
+Info (10041): Inferred latch for "Y_Food_2[7]" at Game.v(249) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 249
+Info (10041): Inferred latch for "Y_Food_2[8]" at Game.v(249) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 249
+Info (10041): Inferred latch for "Y_Food_2[9]" at Game.v(249) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 249
+Info (10041): Inferred latch for "Y_Food_2[10]" at Game.v(249) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 249
+Info (10041): Inferred latch for "Y_Food_1[0]" at Game.v(246) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 246
+Info (10041): Inferred latch for "Y_Food_1[1]" at Game.v(246) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 246
+Info (10041): Inferred latch for "Y_Food_1[2]" at Game.v(246) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 246
+Info (10041): Inferred latch for "Y_Food_1[3]" at Game.v(246) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 246
+Info (10041): Inferred latch for "Y_Food_1[4]" at Game.v(246) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 246
+Info (10041): Inferred latch for "Y_Food_1[5]" at Game.v(246) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 246
+Info (10041): Inferred latch for "Y_Food_1[6]" at Game.v(246) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 246
+Info (10041): Inferred latch for "Y_Food_1[7]" at Game.v(246) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 246
+Info (10041): Inferred latch for "Y_Food_1[8]" at Game.v(246) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 246
+Info (10041): Inferred latch for "Y_Food_1[9]" at Game.v(246) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 246
+Info (10041): Inferred latch for "Y_Food_1[10]" at Game.v(246) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 246
+Info (10041): Inferred latch for "X_Food_5[0]" at Game.v(242) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 242
+Info (10041): Inferred latch for "X_Food_5[1]" at Game.v(242) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 242
+Info (10041): Inferred latch for "X_Food_5[2]" at Game.v(242) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 242
+Info (10041): Inferred latch for "X_Food_5[3]" at Game.v(242) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 242
+Info (10041): Inferred latch for "X_Food_5[4]" at Game.v(242) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 242
+Info (10041): Inferred latch for "X_Food_5[5]" at Game.v(242) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 242
+Info (10041): Inferred latch for "X_Food_5[6]" at Game.v(242) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 242
+Info (10041): Inferred latch for "X_Food_5[7]" at Game.v(242) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 242
+Info (10041): Inferred latch for "X_Food_5[8]" at Game.v(242) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 242
+Info (10041): Inferred latch for "X_Food_5[9]" at Game.v(242) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 242
+Info (10041): Inferred latch for "X_Food_5[10]" at Game.v(242) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 242
+Info (10041): Inferred latch for "X_Food_4[0]" at Game.v(239) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 239
+Info (10041): Inferred latch for "X_Food_4[1]" at Game.v(239) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 239
+Info (10041): Inferred latch for "X_Food_4[2]" at Game.v(239) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 239
+Info (10041): Inferred latch for "X_Food_4[3]" at Game.v(239) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 239
+Info (10041): Inferred latch for "X_Food_4[4]" at Game.v(239) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 239
+Info (10041): Inferred latch for "X_Food_4[5]" at Game.v(239) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 239
+Info (10041): Inferred latch for "X_Food_4[6]" at Game.v(239) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 239
+Info (10041): Inferred latch for "X_Food_4[7]" at Game.v(239) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 239
+Info (10041): Inferred latch for "X_Food_4[8]" at Game.v(239) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 239
+Info (10041): Inferred latch for "X_Food_4[9]" at Game.v(239) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 239
+Info (10041): Inferred latch for "X_Food_4[10]" at Game.v(239) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 239
+Info (10041): Inferred latch for "X_Food_3[0]" at Game.v(236) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 236
+Info (10041): Inferred latch for "X_Food_3[1]" at Game.v(236) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 236
+Info (10041): Inferred latch for "X_Food_3[2]" at Game.v(236) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 236
+Info (10041): Inferred latch for "X_Food_3[3]" at Game.v(236) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 236
+Info (10041): Inferred latch for "X_Food_3[4]" at Game.v(236) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 236
+Info (10041): Inferred latch for "X_Food_3[5]" at Game.v(236) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 236
+Info (10041): Inferred latch for "X_Food_3[6]" at Game.v(236) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 236
+Info (10041): Inferred latch for "X_Food_3[7]" at Game.v(236) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 236
+Info (10041): Inferred latch for "X_Food_3[8]" at Game.v(236) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 236
+Info (10041): Inferred latch for "X_Food_3[9]" at Game.v(236) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 236
+Info (10041): Inferred latch for "X_Food_3[10]" at Game.v(236) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 236
+Info (10041): Inferred latch for "X_Food_2[0]" at Game.v(233) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 233
+Info (10041): Inferred latch for "X_Food_2[1]" at Game.v(233) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 233
+Info (10041): Inferred latch for "X_Food_2[2]" at Game.v(233) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 233
+Info (10041): Inferred latch for "X_Food_2[3]" at Game.v(233) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 233
+Info (10041): Inferred latch for "X_Food_2[4]" at Game.v(233) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 233
+Info (10041): Inferred latch for "X_Food_2[5]" at Game.v(233) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 233
+Info (10041): Inferred latch for "X_Food_2[6]" at Game.v(233) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 233
+Info (10041): Inferred latch for "X_Food_2[7]" at Game.v(233) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 233
+Info (10041): Inferred latch for "X_Food_2[8]" at Game.v(233) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 233
+Info (10041): Inferred latch for "X_Food_2[9]" at Game.v(233) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 233
+Info (10041): Inferred latch for "X_Food_2[10]" at Game.v(233) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 233
+Info (10041): Inferred latch for "X_Food_1[0]" at Game.v(230) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 230
+Info (10041): Inferred latch for "X_Food_1[1]" at Game.v(230) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 230
+Info (10041): Inferred latch for "X_Food_1[2]" at Game.v(230) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 230
+Info (10041): Inferred latch for "X_Food_1[3]" at Game.v(230) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 230
+Info (10041): Inferred latch for "X_Food_1[4]" at Game.v(230) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 230
+Info (10041): Inferred latch for "X_Food_1[5]" at Game.v(230) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 230
+Info (10041): Inferred latch for "X_Food_1[6]" at Game.v(230) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 230
+Info (10041): Inferred latch for "X_Food_1[7]" at Game.v(230) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 230
+Info (10041): Inferred latch for "X_Food_1[8]" at Game.v(230) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 230
+Info (10041): Inferred latch for "X_Food_1[9]" at Game.v(230) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 230
+Info (10041): Inferred latch for "X_Food_1[10]" at Game.v(230) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 230
+Info (10041): Inferred latch for "Y_Elf[0]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "Y_Elf[1]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "Y_Elf[2]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "Y_Elf[3]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "Y_Elf[4]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "Y_Elf[5]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "Y_Elf[6]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "Y_Elf[7]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "Y_Elf[8]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "Y_Elf[9]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "Y_Elf[10]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "Y_Elf[11]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "X_Elf[0]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "X_Elf[1]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "X_Elf[2]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "X_Elf[3]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "X_Elf[4]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "X_Elf[5]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "X_Elf[6]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "X_Elf[7]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "X_Elf[8]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "X_Elf[9]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "X_Elf[10]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "X_Elf[11]" at Game.v(226) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 226
+Info (10041): Inferred latch for "y_Boss[0]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "y_Boss[1]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "y_Boss[2]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "y_Boss[3]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "y_Boss[4]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "y_Boss[5]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "y_Boss[6]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "y_Boss[7]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "y_Boss[8]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "y_Boss[9]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "x_Boss[0]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "x_Boss[1]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "x_Boss[2]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "x_Boss[3]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "x_Boss[4]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "x_Boss[5]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "x_Boss[6]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "x_Boss[7]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "x_Boss[8]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "x_Boss[9]" at Game.v(212) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 212
+Info (10041): Inferred latch for "y2_Food_5[0]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_5[1]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_5[2]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_5[3]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_5[4]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_5[5]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_5[6]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_5[7]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_5[8]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_5[9]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_5[0]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_5[1]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_5[2]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_5[3]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_5[4]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_5[5]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_5[6]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_5[7]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_5[8]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_5[9]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_4[0]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_4[1]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_4[2]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_4[3]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_4[4]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_4[5]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_4[6]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_4[7]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_4[8]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_4[9]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_4[0]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_4[1]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_4[2]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_4[3]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_4[4]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_4[5]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_4[6]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_4[7]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_4[8]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_4[9]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_2[0]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_2[1]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_2[2]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_2[3]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_2[4]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_2[5]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_2[6]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_2[7]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_2[8]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_2[9]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_2[0]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_2[1]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_2[2]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_2[3]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_2[4]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_2[5]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_2[6]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_2[7]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_2[8]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_2[9]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_1[0]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_1[1]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_1[2]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_1[3]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_1[4]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_1[5]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_1[6]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_1[7]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_1[8]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y2_Food_1[9]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_1[0]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_1[1]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_1[2]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_1[3]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_1[4]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_1[5]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_1[6]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_1[7]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_1[8]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "x2_Food_1[9]" at Game.v(185) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+Info (10041): Inferred latch for "y1_Food_5[0]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_5[1]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_5[2]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_5[3]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_5[4]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_5[5]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_5[6]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_5[7]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_5[8]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_5[9]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_5[0]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_5[1]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_5[2]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_5[3]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_5[4]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_5[5]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_5[6]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_5[7]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_5[8]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_5[9]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_4[0]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_4[1]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_4[2]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_4[3]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_4[4]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_4[5]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_4[6]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_4[7]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_4[8]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_4[9]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_4[0]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_4[1]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_4[2]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_4[3]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_4[4]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_4[5]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_4[6]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_4[7]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_4[8]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_4[9]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_3[0]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_3[1]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_3[2]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_3[3]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_3[4]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_3[5]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_3[6]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_3[7]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_3[8]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_3[9]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_3[0]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_3[1]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_3[2]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_3[3]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_3[4]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_3[5]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_3[6]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_3[7]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_3[8]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_3[9]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_2[0]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_2[1]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_2[2]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_2[3]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_2[4]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_2[5]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_2[6]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_2[7]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_2[8]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_2[9]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_2[0]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_2[1]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_2[2]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_2[3]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_2[4]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_2[5]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_2[6]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_2[7]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_2[8]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_2[9]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_1[0]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_1[1]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_1[2]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_1[3]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_1[4]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_1[5]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_1[6]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_1[7]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_1[8]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y1_Food_1[9]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_1[0]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_1[1]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_1[2]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_1[3]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_1[4]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_1[5]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_1[6]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_1[7]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_1[8]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "x1_Food_1[9]" at Game.v(159) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 159
+Info (10041): Inferred latch for "y_Elf[0]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "y_Elf[1]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "y_Elf[2]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "y_Elf[3]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "y_Elf[4]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "y_Elf[5]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "y_Elf[6]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "y_Elf[7]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "y_Elf[8]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "y_Elf[9]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "x_Elf[0]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "x_Elf[1]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "x_Elf[2]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "x_Elf[3]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "x_Elf[4]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "x_Elf[5]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "x_Elf[6]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "x_Elf[7]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "x_Elf[8]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Info (10041): Inferred latch for "x_Elf[9]" at Game.v(139) File: D:/FPGA/0523_Hw/Hw/Game.v Line: 139
+Warning (13012): Latch Y_Food_4[0] has unsafe behavior File: D:/FPGA/0523_Hw/Hw/Game.v Line: 255
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ver_counter[2] File: D:/FPGA/0523_Hw/Hw/Game.v Line: 375
+Warning (13012): Latch y2_Food_4[1] has unsafe behavior File: D:/FPGA/0523_Hw/Hw/Game.v Line: 185
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ver_counter[2] File: D:/FPGA/0523_Hw/Hw/Game.v Line: 375
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: D:/FPGA/0523_Hw/Hw/Game.v Line: 8
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/FPGA/0523_Hw/Hw/output_files/Game.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1078 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 1044 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 84 warnings
+    Info: Peak virtual memory: 4853 megabytes
+    Info: Processing ended: Sat Jun 18 05:49:38 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:17
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/FPGA/0523_Hw/Hw/output_files/Game.map.smsg.
+
+

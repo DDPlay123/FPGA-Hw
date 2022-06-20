@@ -1,0 +1,6 @@
+module LED_Wave_tb;
+// IO port
+reg left, right, sw, clk;
+wire [9:0]Led;
+
+endmodule 

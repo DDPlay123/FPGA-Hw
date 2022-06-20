@@ -1,0 +1,5 @@
+module LED_10Period(Led, Sw);
+output Led;
+input Sw;
+
+endmodule 

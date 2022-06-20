@@ -1,0 +1,56 @@
+# Reading pref.tcl
+# do Traffic_Light_Seg_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {Traffic_Light_Seg.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:10 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." Traffic_Light_Seg.vo 
+# -- Compiling module Traffic_Light_Seg
+# 
+# Top level modules:
+# 	Traffic_Light_Seg
+# End time: 21:04:10 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/FPGA/0411_Hw/Traffic_Light_Seg {C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:10 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/0411_Hw/Traffic_Light_Seg" C:/FPGA/0411_Hw/Traffic_Light_Seg/Traffic_Light_Seg_tb.v 
+# -- Compiling module Traffic_Light_Seg_tb
+# 
+# Top level modules:
+# 	Traffic_Light_Seg_tb
+# End time: 21:04:10 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  Traffic_Light_Seg_tb
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" Traffic_Light_Seg_tb 
+# Start time: 21:04:10 on Apr 17,2022
+# Loading work.Traffic_Light_Seg_tb
+# Loading work.Traffic_Light_Seg
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_clkena
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 40 sec
+# Break key hit
+# Simulation stop requested.
+# End time: 21:04:27 on Apr 17,2022, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 0

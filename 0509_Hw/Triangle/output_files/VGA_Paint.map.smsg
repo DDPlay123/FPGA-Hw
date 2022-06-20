@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at VGA_Paint.v(54): always construct contains both blocking and non-blocking assignments File: C:/FPGA/0509_Hw/Hw1/VGA_Paint.v Line: 54

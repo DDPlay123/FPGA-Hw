@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Alarm_Clock.v(135): always construct contains both blocking and non-blocking assignments File: C:/FPGA/0328_Hw/Alarm_Clock/Alarm_Clock.v Line: 135

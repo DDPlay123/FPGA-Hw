@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=C\:\\FPGA\\0606_Hw\\software\\NIOS_LED
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\FPGA\\0606_Hw\\NIOS_LED_Qsys.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\FPGA\\0606_Hw\\software\\NIOS_LED_bsp

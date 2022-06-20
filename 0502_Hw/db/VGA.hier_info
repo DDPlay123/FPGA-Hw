@@ -1,0 +1,38 @@
+|VGA
+Red[0] << Red[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Red[1] << Red[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Red[2] << Red[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Red[3] << Red[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Red[4] << Red[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Red[5] << Red[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Red[6] << Red[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Red[7] << Red[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Green[0] << Green[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Green[1] << Green[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Green[2] << Green[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Green[3] << Green[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Green[4] << Green[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Green[5] << Green[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Green[6] << Green[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Green[7] << Green[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Blue[0] << Blue[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Blue[1] << Blue[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Blue[2] << Blue[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Blue[3] << Blue[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Blue[4] << Blue[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Blue[5] << Blue[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Blue[6] << Blue[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Blue[7] << Blue[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+VGA_CLK << VGA_CLK~reg0.DB_MAX_OUTPUT_PORT_TYPE
+VGA_BLANK_N << VGA_BLANK_N~reg0.DB_MAX_OUTPUT_PORT_TYPE
+VGA_HS << VGA_HS~reg0.DB_MAX_OUTPUT_PORT_TYPE
+VGA_VS << VGA_VS~reg0.DB_MAX_OUTPUT_PORT_TYPE
+VGA_SYNC_N << <GND>
+Clk_50MHz => VGA_CLK~reg0.CLK
+Sw[0] => Decoder0.IN4
+Sw[1] => Decoder0.IN3
+Sw[2] => Decoder0.IN2
+Sw[3] => Decoder0.IN1
+Sw[4] => Decoder0.IN0
+
+

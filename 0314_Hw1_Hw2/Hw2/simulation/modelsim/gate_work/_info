@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA/0314_Hw1_Hw2/Hw2/simulation/modelsim
+vcounter_8bit
+!s110 1648211267
+!i10b 1
+!s100 =d_IA5eDo7BdzP_BNbX`?0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ISi0h;?0k=P[B35>[3Ud:V0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1648211259
+8counter_8bit.vo
+Fcounter_8bit.vo
+!i122 0
+L0 32 1281
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z4 !s108 1648211267.000000
+!s107 counter_8bit.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|counter_8bit.vo|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+Z6 tCvgOpt 0
+vcounter_8bit_tb
+!s110 1648211268
+!i10b 1
+!s100 KiK?o=?c>LLV8dk<T0R033
+R1
+IMVcOBV?VT8n_oJ;9_E23`1
+R2
+R0
+w1647809549
+8C:/FPGA/0314_Hw1_Hw2/Hw2/counter_8bit_tb.v
+FC:/FPGA/0314_Hw1_Hw2/Hw2/counter_8bit_tb.v
+!i122 1
+L0 2 20
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/FPGA/0314_Hw1_Hw2/Hw2/counter_8bit_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/0314_Hw1_Hw2/Hw2|C:/FPGA/0314_Hw1_Hw2/Hw2/counter_8bit_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/FPGA/0314_Hw1_Hw2/Hw2
+R6

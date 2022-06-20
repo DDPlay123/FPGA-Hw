@@ -1,0 +1,22 @@
+module adder_4bit_tb;
+
+reg [3:0] a, b;
+reg cin;
+
+wire [3:0] s;
+wire cout;
+integer i;
+
+adder_4bit U1(.S(s), .Cout(cout), .A(a), .B(b), .Cin(cin))
+
+initial begin
+	a 	 = 4'd0;
+	b 	 = 4'd0;
+	cin = 4'd0;
+	
+	for (i=0; i < 5; i = i+1) begin
+		#10 a = ~a;
+		#20 b = ~b
+	end
+end
+endmodule

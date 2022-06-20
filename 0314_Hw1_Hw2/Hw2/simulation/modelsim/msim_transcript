@@ -1,0 +1,56 @@
+# Reading pref.tcl
+# do counter_8bit_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {counter_8bit.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:27:47 on Mar 25,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." counter_8bit.vo 
+# -- Compiling module counter_8bit
+# 
+# Top level modules:
+# 	counter_8bit
+# End time: 20:27:47 on Mar 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/FPGA/0314_Hw1_Hw2/Hw2 {C:/FPGA/0314_Hw1_Hw2/Hw2/counter_8bit_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:27:47 on Mar 25,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/0314_Hw1_Hw2/Hw2" C:/FPGA/0314_Hw1_Hw2/Hw2/counter_8bit_tb.v 
+# -- Compiling module counter_8bit_tb
+# 
+# Top level modules:
+# 	counter_8bit_tb
+# End time: 20:27:48 on Mar 25,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  counter_8bit_tb
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" counter_8bit_tb 
+# Start time: 20:27:48 on Mar 25,2022
+# Loading work.counter_8bit_tb
+# Loading work.counter_8bit
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_clkena
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 sec
+# Break key hit
+# Simulation stop requested.
+# End time: 20:31:25 on Mar 25,2022, Elapsed time: 0:03:37
+# Errors: 0, Warnings: 0

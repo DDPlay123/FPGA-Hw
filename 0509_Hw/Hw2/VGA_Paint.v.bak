@@ -1,0 +1,43 @@
+module VGA_Paint(Red, Green, Blue, 
+					  VGA_CLK, VGA_BLANK_N, 
+					  VGA_HS, VGA_VS, VGA_SYNC_N,
+					  Clk_50MHz, Key);
+			  
+// IO PORT
+output reg [7:0]Red, Green, Blue;
+output reg VGA_CLK = 1'b0, 
+			  VGA_BLANK_N, VGA_HS, VGA_VS, 
+			  VGA_SYNC_N = 1'b0;
+input Clk_50MHz;
+input Key;
+
+// 25MHz -> 40ns
+always@(posedge Clk_50MHz)begin
+	VGA_CLK = ~VGA_CLK;
+end
+
+// Screen SCAN
+reg [9:0]hor_counter, 
+		   ver_counter;
+
+always@(posedge VGA_CLK)begin
+	// Horizontal Scan
+	if(hor_counter == 795) hor_counter = 0;
+	else hor_counter = hor_counter + 1;
+	// Vertical Scan
+	if(ver_counter == 523 && hor_counter == 700) ver_counter = 0;
+	else if(hor_counter == 700) ver_counter = ver_counter + 1;
+	// Horizontal Signal
+	if(hor_counter >= 658 && hor_counter <= 753) VGA_HS = 1'b0;
+	else VGA_HS = 1'b1;
+	// Vertical Signal
+	if(ver_counter >= 491 && ver_counter <= 492) VGA_VS = 1'b0;
+	else VGA_VS = 1'b1;
+	// Output RGB Data
+	if(hor_counter >= 0 && hor_counter <= 639) VGA_BLANK_N = 1'b1;
+	else VGA_BLANK_N = 1'b0;
+	
+end
+
+
+endmodule 

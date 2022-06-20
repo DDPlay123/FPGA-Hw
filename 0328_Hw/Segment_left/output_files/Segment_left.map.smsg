@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Segment_left.v(31): always construct contains both blocking and non-blocking assignments File: C:/FPGA/0328_Hw/Segment_left/Segment_left.v Line: 31

@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA/0321_Hw/Traffic_Light/simulation/modelsim
+vTraffic_Light
+Z1 !s110 1649268088
+!i10b 1
+!s100 9Q5JSzGigz8YikNh3V?2d0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IVKBNin:41de6002ER<VLf2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1649268081
+8Traffic_Light.vo
+FTraffic_Light.vo
+!i122 0
+L0 32 2645
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1649268088.000000
+!s107 Traffic_Light.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Traffic_Light.vo|
+!i113 1
+Z6 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+Z7 tCvgOpt 0
+n@traffic_@light
+vTraffic_Light_tb
+R1
+!i10b 1
+!s100 k`_>bZ<J_zfzllggPa>AK2
+R2
+I@eT]A3OQPV`[YS`XYWTef0
+R3
+R0
+w1649265299
+8C:/FPGA/0321_Hw/Traffic_Light/Traffic_Light_tb.v
+FC:/FPGA/0321_Hw/Traffic_Light/Traffic_Light_tb.v
+!i122 1
+L0 2 28
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/FPGA/0321_Hw/Traffic_Light/Traffic_Light_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/0321_Hw/Traffic_Light|C:/FPGA/0321_Hw/Traffic_Light/Traffic_Light_tb.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/FPGA/0321_Hw/Traffic_Light
+R7
+n@traffic_@light_tb

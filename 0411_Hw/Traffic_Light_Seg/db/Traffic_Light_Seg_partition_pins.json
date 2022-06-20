@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Counter",
+					"strict" : false
+				},
+				{
+					"name" : "Road_SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Res_n",
+					"strict" : false
+				},
+				{
+					"name" : "Road_SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Road_SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_50MHz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

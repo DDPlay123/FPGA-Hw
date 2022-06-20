@@ -1,0 +1,54 @@
+# Reading pref.tcl
+# do led_display_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {led_display.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:07:19 on Mar 14,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." led_display.vo 
+# -- Compiling module led_display
+# 
+# Top level modules:
+# 	led_display
+# End time: 18:07:19 on Mar 14,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/FPGA/0314_Hw1_Hw2/LED_Display {C:/FPGA/0314_Hw1_Hw2/LED_Display/led_display_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:07:19 on Mar 14,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/0314_Hw1_Hw2/LED_Display" C:/FPGA/0314_Hw1_Hw2/LED_Display/led_display_tb.v 
+# -- Compiling module led_display_tb
+# 
+# Top level modules:
+# 	led_display_tb
+# End time: 18:07:19 on Mar 14,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  led_display_tb
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" led_display_tb 
+# Start time: 18:07:19 on Mar 14,2022
+# Loading work.led_display_tb
+# Loading work.led_display
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_clkena
+# Loading altera_ver.dffeas
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.PRIM_GDFF_LOW
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 sec
+# End time: 20:07:06 on Mar 14,2022, Elapsed time: 1:59:47
+# Errors: 0, Warnings: 0

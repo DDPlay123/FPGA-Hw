@@ -1,0 +1,682 @@
+Analysis & Synthesis report for Game
+Mon May 23 00:06:08 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Div5
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
+ 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Div4
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon May 23 00:06:08 2022       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; Game                                        ;
+; Top-level Entity Name           ; Game                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 56                                          ;
+; Total pins                      ; 30                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; Game               ; Game               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; Game.v                           ; yes             ; User Verilog HDL File        ; C:/FPGA/0516_Hw/Hw/Game.v                                                  ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/FPGA/0516_Hw/Hw/db/lpm_divide_hbm.tdf                                   ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/FPGA/0516_Hw/Hw/db/sign_div_unsign_nlh.tdf                              ;         ;
+; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/FPGA/0516_Hw/Hw/db/alt_u_div_kve.tdf                                    ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimate of Logic utilization (ALMs needed) ; 295             ;
+;                                             ;                 ;
+; Combinational ALUT usage for logic          ; 560             ;
+;     -- 7 input functions                    ; 1               ;
+;     -- 6 input functions                    ; 28              ;
+;     -- 5 input functions                    ; 69              ;
+;     -- 4 input functions                    ; 98              ;
+;     -- <=3 input functions                  ; 364             ;
+;                                             ;                 ;
+; Dedicated logic registers                   ; 56              ;
+;                                             ;                 ;
+; I/O pins                                    ; 30              ;
+;                                             ;                 ;
+; Total DSP Blocks                            ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; Clk_50MHz~input ;
+; Maximum fan-out                             ; 30              ;
+; Total fan-out                               ; 1928            ;
+; Average fan-out                             ; 2.85            ;
++---------------------------------------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                          ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                   ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |Game                                  ; 560 (268)           ; 56 (56)                   ; 0                 ; 0          ; 30   ; 0            ; |Game                                                                                                 ; Game                ; work         ;
+;    |lpm_divide:Div0|                   ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_hbm:auto_generated|  ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
+;          |sign_div_unsign_nlh:divider| ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;             |alt_u_div_kve:divider|    ; 73 (73)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
+;    |lpm_divide:Div2|                   ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_hbm:auto_generated|  ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div2|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
+;          |sign_div_unsign_nlh:divider| ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div2|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;             |alt_u_div_kve:divider|    ; 73 (73)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div2|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
+;    |lpm_divide:Div4|                   ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div4                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_hbm:auto_generated|  ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div4|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
+;          |sign_div_unsign_nlh:divider| ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div4|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;             |alt_u_div_kve:divider|    ; 73 (73)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div4|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
+;    |lpm_divide:Div5|                   ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div5                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_hbm:auto_generated|  ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div5|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
+;          |sign_div_unsign_nlh:divider| ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div5|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;             |alt_u_div_kve:divider|    ; 73 (73)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Game|lpm_divide:Div5|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; X_Elf[0]                                            ; always4             ; yes                    ;
+; Y_Boss[0]                                           ; Z_Boss[0]           ; yes                    ;
+; Z_Boss[0]                                           ; Z_Boss[0]           ; yes                    ;
+; X_Cus[0]                                            ; y_Cus[6]            ; yes                    ;
+; Y_Elf[0]                                            ; always4             ; yes                    ;
+; X_Boss[0]                                           ; Z_Boss[0]           ; yes                    ;
+; y_Elf[4]_3201                                       ; always4             ; yes                    ;
+; y_Elf[5]_3207                                       ; always4             ; yes                    ;
+; y_Elf[6]_3213                                       ; always4             ; yes                    ;
+; y_Elf[7]_3219                                       ; always4             ; yes                    ;
+; y_Elf[8]_3225                                       ; always4             ; yes                    ;
+; y_Elf[9]_3231                                       ; always4             ; yes                    ;
+; x_Elf[4]_3261                                       ; always4             ; yes                    ;
+; x_Elf[5]_3267                                       ; always4             ; yes                    ;
+; x_Elf[6]_3273                                       ; always4             ; yes                    ;
+; x_Elf[7]_3279                                       ; always4             ; yes                    ;
+; x_Elf[8]_3285                                       ; always4             ; yes                    ;
+; x_Elf[9]_3291                                       ; always4             ; yes                    ;
+; x_Elf[3]_3255                                       ; always4             ; yes                    ;
+; x_Elf[2]_3249                                       ; always4             ; yes                    ;
+; x_Elf[0]_3237                                       ; always4             ; yes                    ;
+; x_Elf[1]_3243                                       ; always4             ; yes                    ;
+; y_Elf[2]_3189                                       ; always4             ; yes                    ;
+; y_Elf[3]_3195                                       ; always4             ; yes                    ;
+; y_Boss[4]_3051                                      ; Z_Boss[0]           ; yes                    ;
+; y_Boss[5]_3059                                      ; Z_Boss[0]           ; yes                    ;
+; y_Boss[6]_3067                                      ; Z_Boss[0]           ; yes                    ;
+; y_Boss[7]_3075                                      ; Z_Boss[0]           ; yes                    ;
+; y_Boss[8]_3083                                      ; Z_Boss[0]           ; yes                    ;
+; y_Boss[9]_3091                                      ; Z_Boss[0]           ; yes                    ;
+; x_Boss[4]_3131                                      ; Z_Boss[0]           ; yes                    ;
+; x_Boss[5]_3139                                      ; Z_Boss[0]           ; yes                    ;
+; x_Boss[6]_3147                                      ; Z_Boss[0]           ; yes                    ;
+; x_Boss[7]_3155                                      ; Z_Boss[0]           ; yes                    ;
+; x_Boss[8]_3163                                      ; Z_Boss[0]           ; yes                    ;
+; x_Boss[9]_3171                                      ; Z_Boss[0]           ; yes                    ;
+; x_Boss[2]_3115                                      ; Z_Boss[0]           ; yes                    ;
+; x_Boss[3]_3123                                      ; Z_Boss[0]           ; yes                    ;
+; y_Boss[2]_3035                                      ; Z_Boss[0]           ; yes                    ;
+; y_Boss[3]_3043                                      ; Z_Boss[0]           ; yes                    ;
+; y_Boss[0]_3019                                      ; Z_Boss[0]           ; yes                    ;
+; y_Boss[1]_3027                                      ; Z_Boss[0]           ; yes                    ;
+; y_Cus[6]_2881                                       ; y_Cus[6]            ; yes                    ;
+; y_Cus[5]_2871                                       ; y_Cus[6]            ; yes                    ;
+; y_Cus[4]_2861                                       ; y_Cus[6]            ; yes                    ;
+; y_Cus[8]_2901                                       ; y_Cus[6]            ; yes                    ;
+; y_Cus[9]_2911                                       ; y_Cus[6]            ; yes                    ;
+; x_Cus[4]_2961                                       ; y_Cus[6]            ; yes                    ;
+; x_Cus[5]_2971                                       ; y_Cus[6]            ; yes                    ;
+; x_Cus[6]_2981                                       ; y_Cus[6]            ; yes                    ;
+; x_Cus[7]_2991                                       ; y_Cus[6]            ; yes                    ;
+; x_Cus[8]_3001                                       ; y_Cus[6]            ; yes                    ;
+; x_Cus[9]_3011                                       ; y_Cus[6]            ; yes                    ;
+; y_Cus[7]_2891                                       ; y_Cus[6]            ; yes                    ;
+; Number of user-specified and inferred latches = 54  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 56    ;
+; Number of registers using Synchronous Clear  ; 28    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Game|RGB                  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Game|RGB                  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Game|ver_counter          ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Game|RGB                  ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |Game|RGB                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 3              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div5 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 3              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div2 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 3              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div4 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 3              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 56                          ;
+;     SCLR              ; 28                          ;
+;     plain             ; 28                          ;
+; arriav_lcell_comb     ; 562                         ;
+;     arith             ; 287                         ;
+;         0 data inputs ; 44                          ;
+;         1 data inputs ; 166                         ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 44                          ;
+;         4 data inputs ; 32                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 274                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 47                          ;
+;         3 data inputs ; 61                          ;
+;         4 data inputs ; 66                          ;
+;         5 data inputs ; 69                          ;
+;         6 data inputs ; 28                          ;
+; boundary_port         ; 30                          ;
+;                       ;                             ;
+; Max LUT depth         ; 26.10                       ;
+; Average LUT depth     ; 16.05                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Mon May 23 00:06:00 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Game -c Game
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file game.v
+    Info (12023): Found entity 1: Game File: C:/FPGA/0516_Hw/Hw/Game.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file game_tb.v
+    Info (12023): Found entity 1: Game_tb File: C:/FPGA/0516_Hw/Hw/Game_tb.v Line: 2
+Info (12127): Elaborating entity "Game" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at Game.v(17): truncated value with size 32 to match size of target (28) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 17
+Warning (10230): Verilog HDL assignment warning at Game.v(35): truncated value with size 32 to match size of target (10) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 35
+Warning (10230): Verilog HDL assignment warning at Game.v(38): truncated value with size 32 to match size of target (10) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 38
+Warning (10230): Verilog HDL assignment warning at Game.v(58): truncated value with size 32 to match size of target (10) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 58
+Warning (10230): Verilog HDL assignment warning at Game.v(59): truncated value with size 32 to match size of target (10) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 59
+Warning (10230): Verilog HDL assignment warning at Game.v(63): truncated value with size 32 to match size of target (10) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 63
+Warning (10230): Verilog HDL assignment warning at Game.v(64): truncated value with size 32 to match size of target (10) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 64
+Warning (10230): Verilog HDL assignment warning at Game.v(69): truncated value with size 32 to match size of target (10) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 69
+Warning (10230): Verilog HDL assignment warning at Game.v(70): truncated value with size 32 to match size of target (10) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 70
+Warning (10240): Verilog HDL Always Construct warning at Game.v(57): inferring latch(es) for variable "X_Elf", which holds its previous value in one or more paths through the always construct File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Warning (10240): Verilog HDL Always Construct warning at Game.v(57): inferring latch(es) for variable "Y_Elf", which holds its previous value in one or more paths through the always construct File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Warning (10240): Verilog HDL Always Construct warning at Game.v(57): inferring latch(es) for variable "X_Boss", which holds its previous value in one or more paths through the always construct File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Warning (10240): Verilog HDL Always Construct warning at Game.v(57): inferring latch(es) for variable "Y_Boss", which holds its previous value in one or more paths through the always construct File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Warning (10240): Verilog HDL Always Construct warning at Game.v(57): inferring latch(es) for variable "Z_Boss", which holds its previous value in one or more paths through the always construct File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Warning (10240): Verilog HDL Always Construct warning at Game.v(57): inferring latch(es) for variable "X_Cus", which holds its previous value in one or more paths through the always construct File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "X_Cus[0]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[1]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[2]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[3]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[4]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[5]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[6]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[7]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[8]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[9]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[10]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[11]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[12]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[13]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[14]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "X_Cus[15]" at Game.v(85) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 85
+Info (10041): Inferred latch for "Z_Boss[0]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[1]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[2]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[3]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[4]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[5]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[6]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[7]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[8]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[9]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[10]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[11]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[12]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[13]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[14]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Z_Boss[15]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[0]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[1]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[2]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[3]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[4]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[5]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[6]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[7]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[8]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[9]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[10]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[11]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Boss[12]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[0]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[1]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[2]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[3]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[4]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[5]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[6]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[7]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[8]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[9]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[10]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[11]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "X_Boss[12]" at Game.v(80) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 80
+Info (10041): Inferred latch for "Y_Elf[0]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "Y_Elf[1]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "Y_Elf[2]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "Y_Elf[3]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "Y_Elf[4]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "Y_Elf[5]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "Y_Elf[6]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "Y_Elf[7]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "Y_Elf[8]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "Y_Elf[9]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "Y_Elf[10]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "Y_Elf[11]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "X_Elf[0]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "X_Elf[1]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "X_Elf[2]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "X_Elf[3]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "X_Elf[4]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "X_Elf[5]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "X_Elf[6]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "X_Elf[7]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "X_Elf[8]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "X_Elf[9]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "X_Elf[10]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "X_Elf[11]" at Game.v(76) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 76
+Info (10041): Inferred latch for "y_Cus[0]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Cus[1]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Cus[2]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Cus[3]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Cus[4]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Cus[5]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Cus[6]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Cus[7]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Cus[8]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Cus[9]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Cus[0]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Cus[1]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Cus[2]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Cus[3]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Cus[4]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Cus[5]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Cus[6]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Cus[7]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Cus[8]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Cus[9]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Boss[0]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Boss[1]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Boss[2]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Boss[3]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Boss[4]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Boss[5]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Boss[6]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Boss[7]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Boss[8]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Boss[9]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Boss[0]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Boss[1]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Boss[2]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Boss[3]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Boss[4]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Boss[5]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Boss[6]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Boss[7]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Boss[8]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Boss[9]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Elf[0]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Elf[1]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Elf[2]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Elf[3]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Elf[4]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Elf[5]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Elf[6]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Elf[7]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Elf[8]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "y_Elf[9]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Elf[0]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Elf[1]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Elf[2]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Elf[3]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Elf[4]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Elf[5]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Elf[6]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Elf[7]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Elf[8]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (10041): Inferred latch for "x_Elf[9]" at Game.v(57) File: C:/FPGA/0516_Hw/Hw/Game.v Line: 57
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/FPGA/0516_Hw/Hw/Game.v Line: 58
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div5" File: C:/FPGA/0516_Hw/Hw/Game.v Line: 70
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2" File: C:/FPGA/0516_Hw/Hw/Game.v Line: 63
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div4" File: C:/FPGA/0516_Hw/Hw/Game.v Line: 69
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/FPGA/0516_Hw/Hw/Game.v Line: 58
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/FPGA/0516_Hw/Hw/Game.v Line: 58
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "3"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
+    Info (12023): Found entity 1: lpm_divide_hbm File: C:/FPGA/0516_Hw/Hw/db/lpm_divide_hbm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/FPGA/0516_Hw/Hw/db/sign_div_unsign_nlh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
+    Info (12023): Found entity 1: alt_u_div_kve File: C:/FPGA/0516_Hw/Hw/db/alt_u_div_kve.tdf Line: 23
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/FPGA/0516_Hw/Hw/Game.v Line: 8
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/FPGA/0516_Hw/Hw/output_files/Game.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 607 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 577 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4853 megabytes
+    Info: Processing ended: Mon May 23 00:06:08 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:13
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/FPGA/0516_Hw/Hw/output_files/Game.map.smsg.
+
+

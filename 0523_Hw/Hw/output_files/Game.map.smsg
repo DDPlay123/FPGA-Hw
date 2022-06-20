@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at Game.v(126): object "x_Elf" differs only in case from object "X_Elf" in the same scope File: D:/FPGA/0523_Hw/Hw/Game.v Line: 126
+Info (10281): Verilog HDL Declaration information at Game.v(126): object "y_Elf" differs only in case from object "Y_Elf" in the same scope File: D:/FPGA/0523_Hw/Hw/Game.v Line: 126
+Info (10281): Verilog HDL Declaration information at Game.v(126): object "x_Boss" differs only in case from object "X_Boss" in the same scope File: D:/FPGA/0523_Hw/Hw/Game.v Line: 126
+Info (10281): Verilog HDL Declaration information at Game.v(126): object "y_Boss" differs only in case from object "Y_Boss" in the same scope File: D:/FPGA/0523_Hw/Hw/Game.v Line: 126

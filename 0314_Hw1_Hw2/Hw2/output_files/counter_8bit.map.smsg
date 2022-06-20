@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at counter_8bit_tb.v(4): object "clk_50Mhz" differs only in case from object "clk_50MHz" in the same scope File: C:/FPGA/0314_Hw1_Hw2/Hw2/counter_8bit_tb.v Line: 4

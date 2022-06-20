@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA/0418_Hw/Hw1/simulation/modelsim
+vLED_10Period
+Z1 !s110 1650817478
+!i10b 1
+!s100 goWL`DfLWI5`688djn31d3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I[[=V1PbMDQ93Q[dYdm:Qb3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1650817469
+8LED_10Period.vo
+FLED_10Period.vo
+!i122 0
+L0 32 3109
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1650817478.000000
+!s107 LED_10Period.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|LED_10Period.vo|
+!i113 1
+Z6 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+Z7 tCvgOpt 0
+n@l@e@d_10@period
+vLED_10Period_tb
+R1
+!i10b 1
+!s100 d4E?3JSG@CfGDAb]H<Eoj0
+R2
+I]H4A7A7k6EB6mP65IT>:l0
+R3
+R0
+w1650266656
+8C:/FPGA/0418_Hw/Hw1/LED_10Period_tb.v
+FC:/FPGA/0418_Hw/Hw1/LED_10Period_tb.v
+!i122 1
+L0 2 14
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/FPGA/0418_Hw/Hw1/LED_10Period_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/0418_Hw/Hw1|C:/FPGA/0418_Hw/Hw1/LED_10Period_tb.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/FPGA/0418_Hw/Hw1
+R7
+n@l@e@d_10@period_tb

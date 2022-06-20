@@ -1,0 +1,30 @@
+|led_display
+LED[0] << LED[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] << LED[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] << LED[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] << LED[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_50Mhz => clk_25Mhz~reg0.CLK
+clk_50Mhz => clk_count[0]~reg0.CLK
+clk_50Mhz => clk_count[1]~reg0.CLK
+clk_50Mhz => clk_count[2]~reg0.CLK
+clk_50Mhz => clk_count[3]~reg0.CLK
+clk_50Mhz => clk_count[4]~reg0.CLK
+clk_50Mhz => clk_count[5]~reg0.CLK
+clk_50Mhz => clk_count[6]~reg0.CLK
+clk_50Mhz => clk_count[7]~reg0.CLK
+clk_25Mhz << clk_25Mhz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_count[0] << clk_count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_count[1] << clk_count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_count[2] << clk_count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_count[3] << clk_count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_count[4] << clk_count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_count[5] << clk_count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_count[6] << clk_count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_count[7] << clk_count[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+res_n => LED[0]~reg0.ACLR
+res_n => LED[1]~reg0.ACLR
+res_n => LED[2]~reg0.ACLR
+res_n => LED[3]~reg0.ACLR
+res_n => state~3.DATAIN
+
+

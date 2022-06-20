@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Led90",
+					"strict" : false
+				},
+				{
+					"name" : "Led50",
+					"strict" : false
+				},
+				{
+					"name" : "Led10",
+					"strict" : false
+				},
+				{
+					"name" : "Key",
+					"strict" : false
+				},
+				{
+					"name" : "Clk_50M",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

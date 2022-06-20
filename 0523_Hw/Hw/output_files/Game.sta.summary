@@ -1,0 +1,229 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'hor_counter[0]'
+Slack : -10.732
+TNS   : -1362.740
+
+Type  : Slow 1100mV 85C Model Setup 'CLK_64'
+Slack : -5.785
+TNS   : -407.161
+
+Type  : Slow 1100mV 85C Model Setup 'Clk_50MHz'
+Slack : -4.915
+TNS   : -96.750
+
+Type  : Slow 1100mV 85C Model Setup 'VGA_CLK~reg0'
+Slack : -4.219
+TNS   : -72.738
+
+Type  : Slow 1100mV 85C Model Hold 'hor_counter[0]'
+Slack : -5.399
+TNS   : -144.564
+
+Type  : Slow 1100mV 85C Model Hold 'Clk_50MHz'
+Slack : -0.593
+TNS   : -0.593
+
+Type  : Slow 1100mV 85C Model Hold 'CLK_64'
+Slack : 0.320
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'VGA_CLK~reg0'
+Slack : 0.586
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'hor_counter[0]'
+Slack : -7.081
+TNS   : -50.358
+
+Type  : Slow 1100mV 85C Model Removal 'hor_counter[0]'
+Slack : 0.851
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'hor_counter[0]'
+Slack : -3.957
+TNS   : -635.667
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Clk_50MHz'
+Slack : -0.508
+TNS   : -20.916
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLK_64'
+Slack : -0.394
+TNS   : -63.257
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA_CLK~reg0'
+Slack : -0.394
+TNS   : -12.266
+
+Type  : Slow 1100mV 0C Model Setup 'hor_counter[0]'
+Slack : -10.270
+TNS   : -1324.415
+
+Type  : Slow 1100mV 0C Model Setup 'CLK_64'
+Slack : -5.769
+TNS   : -400.808
+
+Type  : Slow 1100mV 0C Model Setup 'Clk_50MHz'
+Slack : -4.974
+TNS   : -94.662
+
+Type  : Slow 1100mV 0C Model Setup 'VGA_CLK~reg0'
+Slack : -4.237
+TNS   : -73.679
+
+Type  : Slow 1100mV 0C Model Hold 'hor_counter[0]'
+Slack : -5.362
+TNS   : -148.411
+
+Type  : Slow 1100mV 0C Model Hold 'Clk_50MHz'
+Slack : -0.545
+TNS   : -0.545
+
+Type  : Slow 1100mV 0C Model Hold 'CLK_64'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'VGA_CLK~reg0'
+Slack : 0.657
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'hor_counter[0]'
+Slack : -7.005
+TNS   : -50.433
+
+Type  : Slow 1100mV 0C Model Removal 'hor_counter[0]'
+Slack : 0.793
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'hor_counter[0]'
+Slack : -3.822
+TNS   : -616.505
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Clk_50MHz'
+Slack : -0.525
+TNS   : -22.535
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLK_64'
+Slack : -0.394
+TNS   : -61.711
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA_CLK~reg0'
+Slack : -0.394
+TNS   : -12.097
+
+Type  : Fast 1100mV 85C Model Setup 'hor_counter[0]'
+Slack : -7.239
+TNS   : -863.689
+
+Type  : Fast 1100mV 85C Model Setup 'Clk_50MHz'
+Slack : -3.186
+TNS   : -43.108
+
+Type  : Fast 1100mV 85C Model Setup 'CLK_64'
+Slack : -3.099
+TNS   : -210.989
+
+Type  : Fast 1100mV 85C Model Setup 'VGA_CLK~reg0'
+Slack : -2.141
+TNS   : -36.839
+
+Type  : Fast 1100mV 85C Model Hold 'hor_counter[0]'
+Slack : -3.313
+TNS   : -87.258
+
+Type  : Fast 1100mV 85C Model Hold 'Clk_50MHz'
+Slack : -0.001
+TNS   : -0.001
+
+Type  : Fast 1100mV 85C Model Hold 'CLK_64'
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'VGA_CLK~reg0'
+Slack : 0.221
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'hor_counter[0]'
+Slack : -3.734
+TNS   : -23.347
+
+Type  : Fast 1100mV 85C Model Removal 'hor_counter[0]'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'hor_counter[0]'
+Slack : -2.314
+TNS   : -321.670
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Clk_50MHz'
+Slack : -0.516
+TNS   : -4.438
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLK_64'
+Slack : -0.093
+TNS   : -1.481
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA_CLK~reg0'
+Slack : 0.053
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'hor_counter[0]'
+Slack : -6.260
+TNS   : -755.195
+
+Type  : Fast 1100mV 0C Model Setup 'CLK_64'
+Slack : -2.784
+TNS   : -186.645
+
+Type  : Fast 1100mV 0C Model Setup 'Clk_50MHz'
+Slack : -2.666
+TNS   : -36.279
+
+Type  : Fast 1100mV 0C Model Setup 'VGA_CLK~reg0'
+Slack : -1.903
+TNS   : -33.103
+
+Type  : Fast 1100mV 0C Model Hold 'hor_counter[0]'
+Slack : -2.988
+TNS   : -76.957
+
+Type  : Fast 1100mV 0C Model Hold 'Clk_50MHz'
+Slack : -0.137
+TNS   : -0.137
+
+Type  : Fast 1100mV 0C Model Hold 'CLK_64'
+Slack : 0.118
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'VGA_CLK~reg0'
+Slack : 0.222
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'hor_counter[0]'
+Slack : -3.314
+TNS   : -20.519
+
+Type  : Fast 1100mV 0C Model Removal 'hor_counter[0]'
+Slack : 0.362
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'hor_counter[0]'
+Slack : -1.997
+TNS   : -275.038
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Clk_50MHz'
+Slack : -0.505
+TNS   : -4.451
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLK_64'
+Slack : -0.038
+TNS   : -0.080
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA_CLK~reg0'
+Slack : 0.072
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,25 @@
+|LFSR
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => rand_num[0]~reg0.CLK
+clk => rand_num[1]~reg0.CLK
+clk => rand_num[2]~reg0.CLK
+clk => rand_num[3]~reg0.CLK
+clk => rand_num[4]~reg0.CLK
+clk => rand_num[5]~reg0.CLK
+clk => rand_num[6]~reg0.CLK
+clk => rand_num[7]~reg0.CLK
+rand_num[0] << rand_num[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rand_num[1] << rand_num[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rand_num[2] << rand_num[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rand_num[3] << rand_num[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rand_num[4] << rand_num[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rand_num[5] << rand_num[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rand_num[6] << rand_num[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rand_num[7] << rand_num[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[0] << out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] << out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] << out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

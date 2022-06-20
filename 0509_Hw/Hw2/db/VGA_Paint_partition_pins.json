@@ -1,0 +1,277 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "RGB[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[16]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[17]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[18]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[19]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[20]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[21]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[22]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[23]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLANK_N",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_HS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_VS",
+					"strict" : false
+				},
+				{
+					"name" : "Seg5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Sw[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Sw[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Sw[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Sw[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Sw[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Sw[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sw[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Sw[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Clk_50MHz",
+					"strict" : false
+				},
+				{
+					"name" : "Key[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Key[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Key[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Key[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

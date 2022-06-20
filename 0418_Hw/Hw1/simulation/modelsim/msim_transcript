@@ -1,0 +1,56 @@
+# Reading pref.tcl
+# do LED_10Period_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {LED_10Period.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:24:38 on Apr 25,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." LED_10Period.vo 
+# -- Compiling module LED_10Period
+# 
+# Top level modules:
+# 	LED_10Period
+# End time: 00:24:38 on Apr 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/FPGA/0418_Hw/Hw1 {C:/FPGA/0418_Hw/Hw1/LED_10Period_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:24:38 on Apr 25,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/0418_Hw/Hw1" C:/FPGA/0418_Hw/Hw1/LED_10Period_tb.v 
+# -- Compiling module LED_10Period_tb
+# 
+# Top level modules:
+# 	LED_10Period_tb
+# End time: 00:24:38 on Apr 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  LED_10Period_tb
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" LED_10Period_tb 
+# Start time: 00:24:38 on Apr 25,2022
+# Loading work.LED_10Period_tb
+# Loading work.LED_10Period
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_clkena
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 10 sec
+# Break key hit
+# Break in Module cyclonev_io_ibuf at $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v line 1360
+# End time: 00:25:39 on Apr 25,2022, Elapsed time: 0:01:01
+# Errors: 0, Warnings: 0

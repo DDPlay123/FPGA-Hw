@@ -1,0 +1,55 @@
+# Reading pref.tcl
+# do VGA_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {VGA.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:53:34 on May 07,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." VGA.vo 
+# -- Compiling module VGA
+# 
+# Top level modules:
+# 	VGA
+# End time: 15:53:34 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/FPGA/0502_Hw {C:/FPGA/0502_Hw/VGA_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:53:34 on May 07,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/0502_Hw" C:/FPGA/0502_Hw/VGA_tb.v 
+# -- Compiling module VGA_tb
+# 
+# Top level modules:
+# 	VGA_tb
+# End time: 15:53:34 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  VGA_tb
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" VGA_tb 
+# Start time: 15:53:34 on May 07,2022
+# Loading work.VGA_tb
+# Loading work.VGA
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 10 sec
+# Break key hit
+# Break in Module cyclonev_lcell_comb at $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v line 835
+# End time: 16:13:41 on May 07,2022, Elapsed time: 0:20:07
+# Errors: 0, Warnings: 0

@@ -1,0 +1,77 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cyclonev
+Quartus root          :  c:/intelfpga_lite/20.1/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/20.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  VGA.vo
+Sim SDF file          :  VGA__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/intelfpga_lite/20.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File VGA_run_msim_gate_verilog.do already exists - backing up current file as VGA_run_msim_gate_verilog.do.bak11
+Probing transcript
+ModelSim-Altera Info: # Reading pref.tcl
+ModelSim-Altera Info: # do VGA_run_msim_gate_verilog.do
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim-Altera Info: # vmap work gate_work 
+ModelSim-Altera Info: # Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {VGA.vo}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim-Altera Info: # Start time: 15:53:34 on May 07,2022
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." VGA.vo 
+ModelSim-Altera Info: # -- Compiling module VGA
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	VGA
+ModelSim-Altera Info: # End time: 15:53:34 on May 07,2022, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+C:/FPGA/0502_Hw {C:/FPGA/0502_Hw/VGA_tb.v}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim-Altera Info: # Start time: 15:53:34 on May 07,2022
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/0502_Hw" C:/FPGA/0502_Hw/VGA_tb.v 
+ModelSim-Altera Info: # -- Compiling module VGA_tb
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	VGA_tb
+ModelSim-Altera Info: # End time: 15:53:34 on May 07,2022, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  VGA_tb
+ModelSim-Altera Info: # vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" VGA_tb 
+ModelSim-Altera Info: # Start time: 15:53:34 on May 07,2022
+ModelSim-Altera Info: # Loading work.VGA_tb
+ModelSim-Altera Info: # Loading work.VGA
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_io_obuf
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_io_ibuf
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_lcell_comb
+ModelSim-Altera Info: # Loading altera_ver.dffeas
+ModelSim-Altera Info: # Loading altera_ver.PRIM_GDFF_LOW
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # add wave *
+ModelSim-Altera Info: # view structure
+ModelSim-Altera Info: # .main_pane.structure.interior.cs.body.struct
+ModelSim-Altera Info: # view signals
+ModelSim-Altera Info: # .main_pane.objects.interior.cs.body.tree
+ModelSim-Altera Info: # run 10 sec
+ModelSim-Altera Info: # Break key hit
+ModelSim-Altera Info: # Break in Module cyclonev_lcell_comb at $MODEL_TECH/../altera/verilog/src/cyclonev_atoms.v line 835
+ModelSim-Altera Info: # End time: 16:13:41 on May 07,2022, Elapsed time: 0:20:07
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+Info: NativeLink simulation flow was successful

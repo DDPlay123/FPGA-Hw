@@ -1,0 +1,10 @@
+//----------------------------------------------------
+//Design Name: 8bit binary counter
+//File Name: counter_8bit.v
+//Function: 8位元二進制計數器
+//----------------------------------------------------
+module counter_8bit(LED, CLK_50MHz, Res);
+
+output [7:0]LED;
+input CLK_50MHz, Res;
+
